@@ -1,0 +1,267 @@
+/* reset重置代码
+------------------------------*/
+html {
+    font-size: 625%; /* 62.5% of 1em (16px) = 10px = 1rem*/
+}
+
+body {
+    font: 16px/1.618 Arial, Sans-serif; /* Pixel Fallback */
+    font-size: 0.16rem; /* Font-sizing with rem unit */
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+    padding: 0;
+    margin: 0;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+fieldset,img {
+    border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+    font-weight: normal;
+    font-style: normal;
+}
+ol,ul {
+    list-style: none;
+}
+caption,th {
+    text-align: left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+q:before,q:after {
+    content:'';
+}
+abbr,acronym {
+    border: 0;
+}
+/*清楚浮动*/
+
+
+.clearfix:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+}
+.clearfix { display: inline-table; }
+/* Hides from IE-mac \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* End hide from IE-mac */
+
+
+
+/* 常规默认
+-----------------------------*/
+img {  max-width: 100% }
+body{
+    width:896px;
+    /*width:100%;*/
+    max-width:1000px;
+    margin:0 auto;
+}
+body{
+    transition: width .2s;
+    -moz-transition: width .2s;	/* Firefox 4 */
+    -webkit-transition: width .2s;	/* Safari 和 Chrome */
+    -o-transition: width .2s;	/* Opera */
+}
+#wrap{
+    background:#ccc;
+}
+.header{
+    background:#ccc;
+}
+.content{
+    background:#ccc;
+    /*min-height:500px;*/
+}
+.footer{
+    background:#0066cc;
+}
+.m-title{
+    font-size:14px;
+    border:1px solid #ff0000;
+    background:#fff;
+    margin:3px 0;
+    padding:1px 5px;
+    display:inline-block;
+    font-weight:bold;
+}
+
+.module1{
+    vertical-align:top;
+}
+.module1 .txt1,
+.module1 .txt2{
+    /*width:200px;*/
+    max-width:30%;
+    background:#fff;
+}
+.module1 .i{
+    width:400px;
+}
+
+.module2{
+    margin:0 auto;
+}
+.list{
+}
+.list .one{
+    float:left;
+    width:193px;
+}
+.list .one .i{
+    width:100%;
+}
+
+/*表格*/
+table{
+    border-collapse: collapse;
+    background:#fff;
+    margin:20px auto;
+}
+table th,
+table td{
+    border: solid #000 1px;
+}
+
+.module6{
+    margin:10px 0;
+}
+.module6 .left,
+.module6 .right{
+    float:left;
+    height:20px;
+}
+.module6 .left{
+    background:#c9ffd1;
+    width:4rem;
+}
+.module6 .right{
+    background:#ffcabf;
+    width:4rem;
+}
+
+/* 宽度>1176
+------------------------------*/
+@media only screen and (min-width: 1176px) {
+    .header{
+        background:#2C3E50;
+    }
+}
+
+
+/* 宽度<991
+------------------------------*/
+@media only screen and (max-width:991px){
+    .module4 table th{
+        display:none;
+    }
+    .module4 table td{
+        display:block;
+    }
+    .module4 table td:before {
+        content:attr(data-th);
+        margin-right:20px;
+    }
+}
+
+/* 宽度768~991
+------------------------------*/
+@media only screen and (min-width: 768px) and (max-width:991px) {
+    body{
+        width:712px;
+    }
+    .header{
+        background:#18BC9C;
+    }
+    .list .one{
+        width:354px;
+    }
+}
+
+/* 宽度<767
+------------------------------*/
+@media only screen and (max-width:767px){
+
+
+}
+
+/* 宽度480~767
+------------------------------*/
+@media only screen and (min-width: 480px) and (max-width:767px) {
+    body{
+        width:480px;
+    }
+    .header{
+        background:#ff0000;
+    }
+    .list .one{
+        width:400px;
+    }
+
+    .module3 table td:nth-child(4),
+    .module3 table th:nth-child(4),
+    .module3 table td:nth-child(7),
+    .module3 table th:nth-child(7),
+    .module3 table td:nth-child(8),
+    .module3 table th:nth-child(8) {
+        display: none;
+    }
+
+
+}
+
+/* 宽度<480
+------------------------------*/
+@media only screen and (max-width:480px) {
+    body{
+        width:320px;
+    }
+    .header{
+        background:#efe;
+    }
+    .list .one{
+        width:300px;
+    }
+
+    .module3 table td:nth-child(2),
+    .module3 table th:nth-child(2),
+    .module3 table td:nth-child(3),
+    .module3 table th:nth-child(3),
+    .module3 table td:nth-child(4),
+    .module3 table th:nth-child(4),
+    .module3 table td:nth-child(5),
+    .module3 table th:nth-child(5),
+    .module3 table td:nth-child(7),
+    .module3 table th:nth-child(7),
+    .module3 table td:nth-child(8),
+    .module3 table th:nth-child(8) {
+        display: none;
+    }
+}
+
+/*
+兼容所有浏览器(当然不考虑IE9以下浏览器了)，所以需要加上各浏览器的前缀。
+*/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and ( min--moz-device-pixel-ratio: 1.5), only screen and ( -o-min-device-pixel-ratio: 3/2), only screen and ( min-device-pixel-ratio: 1.5), only screen and (min-resolution: 192dpi) {
+    .retina {
+        color:red;
+    }
+}
+
+
+
+
+
+
+

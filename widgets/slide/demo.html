@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="reset.css"/>
+    <link rel="stylesheet" href="islider.css"/>
+    <script src="islider.js"></script>
+    <style>
+
+        .silder-con{
+
+        }
+        #iSlider-wrapper {
+            background:#ccc;;
+            height:300px;;
+            width:100%;
+            overflow: hidden;
+            position: relative;
+            margin:0 auto;
+        }
+
+
+
+
+    </style>
+</head>
+    <body>
+        <div class="silder-con">
+            <div id="iSlider-wrapper">
+            </div>
+        </div>
+
+        <div class="test">
+            <a href="https://github.com/BE-FE/iSlider/blob/master/README_Chinese.md" target="_blank">github地址</a>
+        </div>
+
+        <script>
+            var list = [
+                {
+                    height: 414,
+                    width: 300,
+                    content: "./imgs/high/1.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content: "./imgs/high/2.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content: "./imgs/high/3.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content:"./imgs/high/4.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content:"./imgs/high/5.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content:"./imgs/high/6.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content:"./imgs/high/7.jpg"
+                },{
+                    height: 414,
+                    width: 300,
+                    content:"./imgs/high/8.jpg"
+                },
+                {
+                    height: 414,
+                    width: 300,
+                    content:"./imgs/high/9.jpg"
+                },
+            ];
+
+            var	islider = new iSlider({
+                type: 'pic',
+                data: list,
+                dom: document.getElementById("iSlider-wrapper"),
+                isLooping: true
+            });
+//            islider.addBtn();
+        </script>
+    </body>
+</html>

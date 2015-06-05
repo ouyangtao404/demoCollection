@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>响应式测试demo</title>
+    <!--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; user-scalable=yes" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script type="text/javascript" src='http://m.alicdn.com/appdev2/wd/publish/lib-141027.js' charset="utf-8"></script>
+    <link rel="stylesheet" media="screen" href="screen.css" />
+    <link rel="stylesheet" media="screen" href="basic.css" />
+
+    <!--测试切换条件时，link会否重新加载，结果：默认全部加载-->
+    <link rel="stylesheet" media="screen and (min-width:800px)" href="switch1.css"/>
+    <link rel="stylesheet" media="screen and (max-width:801px)" href="switch2.css"/>
+
+    <!--隐藏状态栏-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+    <!--通过快捷方式时全屏显示-->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!--iphone对电话号码的识别，关闭-->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!--响应式图片需要加载的js文件-->
+    <script src="picturefill/matchmedia.js"></script>
+    <script src="picturefill/picturefill.js"></script>
+
+</head>
+<body>
+
+<div id="wrap">
+    <div class="header">
+        我是头部
+        <div class="retina">此处文字若是红色，则是高分屏(devicePixelRatio=<span class="J_retina">?</span>)</div>
+    </div>
+    <div class="content">
+        <h2 class="m-title">测试rem作为宽度单位</h2>
+        <div class="module module6 clearfix">
+
+            <div class="left">
+                left
+            </div>
+            <div class="right">
+                right
+            </div>
+
+        </div>
+
+
+        <div class="module module7">
+            <h2 class="m-title">响应式图片(<a href="https://github.com/scottjehl/picturefill" target="_blank">https://github.com/scottjehl/picturefill</a>)</h2>
+
+            <div class="i-box">
+                <!--start-->
+                <span data-picture data-alt="吴哥城（柬埔寨）百因庙的巨石人像">
+                    <span data-src="img/small.jpg"></span>
+                    <span data-src="img/medium.jpg"     data-media="(min-width: 400px)"></span>
+                    <span data-src="img/large.jpg"      data-media="(min-width: 800px)"></span>
+                    <span data-src="img/extralarge.jpg" data-media="(min-width: 1000px)"></span>
+
+                    <!--不支持js的情况下，正常请求图片-->
+                    <noscript>
+                        <img src="img/small.jpg" alt="吴哥城（柬埔寨）百因庙的巨石人像">
+                    </noscript>
+                </span>
+                <!--end-->
+            </div>
+
+
+        </div>
+
+        <div class="module module3">
+            <h2 class="m-title">表格（在宽度不够的情况下，隐藏不重要的数据）</h2>
+            <table>
+                <tr>
+                    <th>Code1</th>
+                    <th>Code2</th>
+                    <th>Code3</th>
+                    <th>Code4</th>
+                    <th>Code5</th>
+                    <th>Code6</th>
+                    <th>Code7</th>
+                    <th>Code8</th>
+                    <th>Code9</th>
+                    <th>Code10</th>
+                </tr>
+                <tr>
+                    <td>content1</td>
+                    <td>content2</td>
+                    <td>content3</td>
+                    <td>content4</td>
+                    <td>content5</td>
+                    <td>content6</td>
+                    <td>content7</td>
+                    <td>content8</td>
+                    <td>content9</td>
+                    <td>content10</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+        <div class="module module4">
+            <h2 class="m-title">表格2（多列横向变2列纵向）</h2>
+            <table>
+                <tr>
+                    <th>price1</th>
+                    <th>price2</th>
+                    <th>price3</th>
+                    <th>price4</th>
+                    <th>price5</th>
+                    <th>price6</th>
+                    <th>price7</th>
+                    <th>price8</th>
+                    <th>price9</th>
+                    <th>price10</th>
+                </tr>
+                <tr>
+                    <td data-th="price1">content1</td>
+                    <td data-th="price2">content2</td>
+                    <td data-th="price3">content3</td>
+                    <td data-th="price4">content4</td>
+                    <td data-th="price5">content5</td>
+                    <td data-th="price6">content6</td>
+                    <td data-th="price7">content7</td>
+                    <td data-th="price8">content8</td>
+                    <td data-th="price9">content9</td>
+                    <td data-th="price10">content10</td>
+                </tr>
+                <tr>
+                    <td data-th="price1">content21</td>
+                    <td data-th="price2">content22</td>
+                    <td data-th="price3">content23</td>
+                    <td data-th="price4">content24</td>
+                    <td data-th="price5">content25</td>
+                    <td data-th="price6">content26</td>
+                    <td data-th="price7">content27</td>
+                    <td data-th="price8">content28</td>
+                    <td data-th="price9">content29</td>
+                    <td data-th="price10">content30</td>
+                </tr>
+
+            </table>
+
+        </div>
+
+
+
+        <div class="module module2">
+            <h2 class="m-title">图文展示</h2>
+            <ul class="list clearfix">
+                <li class="one">
+                    <img class="i" src="http://gtms01.alicdn.com/tps/i1/TB1UCkXHXXXXXXkXpXXTGJW7VXX-1500-1000.jpg" alt=""/>
+                    <span class="title">1我的标题</span>
+                    <p class="tip">1我是详情解释我是详情解释我是详情解释我是详情解释我是详情解释</p>
+                </li>
+                <li class="one">
+                    <img class="i" src="http://gtms01.alicdn.com/tps/i1/TB1UCkXHXXXXXXkXpXXTGJW7VXX-1500-1000.jpg" alt=""/>
+                    <span class="title">2我的标题</span>
+                    <p class="tip">2我是详情解释我是详情解释我是详情解释我是详情解释我是详情解释</p>
+                </li>
+                <li class="one">
+                    <img class="i" src="http://gtms01.alicdn.com/tps/i1/TB1UCkXHXXXXXXkXpXXTGJW7VXX-1500-1000.jpg" alt=""/>
+                    <span class="title">3我的标题</span>
+                    <p class="tip">3我是详情解释我是详情解释我是详情解释我是详情解释我是详情解释</p>
+                </li>
+                <li class="one">
+                    <img class="i" src="http://gtms01.alicdn.com/tps/i1/TB1UCkXHXXXXXXkXpXXTGJW7VXX-1500-1000.jpg" alt=""/>
+                    <span class="title">4我的标题</span>
+                    <p class="tip">4我是详情解释我是详情解释我是详情解释我是详情解释我是详情解释</p>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="footer">
+        我是尾部
+    </div>
+</div>
+
+</body>
+<script>
+    var dp = window.devicePixelRatio;
+    $('.J_retina').html(dp);
+</script>
+</html>

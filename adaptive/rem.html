@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>响应式测试demo</title>
+    <!--<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; user-scalable=yes" />-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>
+html{
+    font-size:625%;
+}
+body{
+    font-size:0.16rem;
+}
+.r1,
+.r2{
+    height:20px;
+    background:red;;
+}
+.r1{
+    width:10px;
+}
+.r2{
+    width:0.1rem;
+    background:blue;
+}
+
+.f20{
+    font-size:0.20rem;
+}
+.f18{
+    font-size:0.18rem;
+}
+.f16{
+    font-size:0.16rem;
+}
+.f14{
+    font-size:0.14rem;
+}
+.f12{
+    font-size:0.12rem;
+}
+
+table{
+    border-collapse: collapse;
+    border: none;
+}
+
+th,
+td
+{
+    border: solid #000 1px;
+}
+    </style>
+</head>
+<body>
+
+<div id="wrap">
+    <table>
+        <tr>
+            <th>rem</th>
+            <th>px</th>
+        </tr>
+        <tr>
+            <td>
+                <div class="f20">20px</div>
+            </td>
+            <td>
+                <div class="f20" style="font-size:20px;">20px</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="f18">18px</div>
+            </td>
+            <td>
+                <div class="f18" style="font-size:18px;">18px</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="f16">16px</div>
+
+            </td>
+            <td>
+                <div class="f16" style="font-size:16px;">16px</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="f14">14px</div>
+            </td>
+            <td>
+                <div class="f14" style="font-size:14px;">14px</div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="f12">12px</div>
+            </td>
+            <td>
+                <div class="f12" style="font-size:12px;">12px</div>
+            </td>
+        </tr>
+    </table>
+
+        <div class="module module6 clearfix">
+            <div class="r2"></div>
+            <div class="r1"></div>
+        </div>
+
+</div>
+
+</body>
+</html>

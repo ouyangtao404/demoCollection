@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>angularjs</title>
+    <script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+    <script src="angular.min.js"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body ng-app="myClock" ng-init="ps={name:'baohe.oyt', sex: 'male'}">
+
+    <div class="con" ng-controller="myController">
+        <ctm-clock></ctm-clock>
+
+        <ctm-btn>
+            <button data-title="taobao">淘宝抬头</button>
+            <button data-title="ali">阿里云抬头</button>
+            <button data-title="yunos">YunOS抬头</button>
+        </ctm-btn>
+
+        <h3>各公司抬头列举</h3>
+        <ctm-taitou sb="taobao"></ctm-taitou>
+        <ctm-taitou sb="ali"></ctm-taitou>
+        <ctm-taitou sb="yunos"></ctm-taitou>
+
+        <input type="text" ng-model="Edison.address"/>
+        <ctm-name name="{{Emmy.name}}" address="Emmy.address"></ctm-name>
+        <ctm-name name="{{Edison.name}}" address="Edison.address"></ctm-name>
+    </div>
+
+</body>
+</html>
