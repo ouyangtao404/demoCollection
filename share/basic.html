@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>css布局</title>
+    <link rel="stylesheet" href="reset.css"/>
+</head>
+<body>
+
+<!--====================float-->
+<style>
+    .container{
+        border:1px solid #ccc;
+    }
+    .a,
+    .b{
+
+    }
+    .a{
+        width:100px;
+        height:100px;
+        background:red;
+
+
+        /*float:left;*/
+
+    }
+    .b{
+        width:200px;
+        height:200px;
+        background:green;
+    }
+</style>
+<div class="container">
+
+    <div class="a"></div>
+
+    <div class="b"></div>
+
+</div>
+
+<!--====================浮动，可图文环绕-->
+<!--<style>-->
+    <!--.container{-->
+        <!--border:1px solid blue;-->
+    <!--}-->
+    <!--.a,-->
+    <!--.b{-->
+
+    <!--}-->
+    <!--.a{-->
+        <!--width:400px;-->
+        <!--height:400px;-->
+        <!--background:red;-->
+        <!--float:left;-->
+
+        <!--margin-right:20px;-->
+    <!--}-->
+    <!--.il{-->
+        <!--margin-right:10px;-->
+        <!--padding:10px;-->
+        <!--background:#ccc;-->
+        <!--width:500px;-->
+    <!--}-->
+    <!--.b{-->
+        <!--width:500px;-->
+        <!--height:500px;-->
+        <!--background:green;-->
+    <!--}-->
+
+    <!--.clearfix:after{-->
+        <!--content:".";-->
+        <!--display:block;-->
+        <!--height:0;-->
+        <!--clear:both;-->
+        <!--visibility:hidden-->
+    <!--}-->
+<!--</style>-->
+<!--<div class="container">-->
+
+    <!--<div class="a">-->
+        <!--<span class="il">我是文本</span>-->
+        <!--<span class="il">我是文本</span>-->
+        <!--<span class="il">我是文本</span>-->
+    <!--</div>-->
+
+    <!--<div class="b">我是文案我是文案我是文案我是文案我是文案我是我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案我是文案</div>-->
+
+<!--</div>-->
+
+<!--====================定位-->
+<!--<style>-->
+    <!--.container{-->
+        <!--border:1px solid blue;-->
+    <!--}-->
+    <!--.a,-->
+    <!--.b{-->
+        <!--width:100px;-->
+        <!--height:100px;-->
+        <!--position:relative;-->
+    <!--}-->
+    <!--.a{-->
+        <!--background:red;-->
+    <!--}-->
+    <!--.a2{-->
+        <!--background:#ccc;-->
+        <!--position:absolute;-->
+        <!--top:10px;-->
+        <!--right:10px;-->
+    <!--}-->
+    <!--.b{-->
+        <!--background:green;-->
+        <!--top:10px;-->
+        <!--left:10px;;-->
+    <!--}-->
+<!--</style>-->
+<!--<div class="container">-->
+
+    <!--<div class="a">-->
+        <!--<div class="a2">a2</div>-->
+    <!--</div>-->
+
+    <!--<div class="b"></div>-->
+
+<!--</div>-->
+
+<!--====================拼爹-->
+<!--<style>-->
+    <!--.container{-->
+        <!--border:1px solid blue;-->
+    <!--}-->
+    <!--.a,-->
+    <!--.b{-->
+        <!--width:100px;-->
+        <!--height:100px;-->
+        <!--position:relative;-->
+        <!--z-index:1;-->
+    <!--}-->
+    <!--.a{-->
+        <!--background:red;-->
+        <!--margin-bottom:10px;-->
+        <!--/*z-index:2;*/-->
+    <!--}-->
+    <!--.b{-->
+        <!--background:green;-->
+    <!--}-->
+
+
+
+    <!--.a2,-->
+    <!--.b2{-->
+        <!--width:50px;-->
+        <!--height:50px;-->
+        <!--background:#ccc;-->
+        <!--position:absolute;-->
+    <!--}-->
+    <!--.a2{-->
+        <!--width:60px;-->
+        <!--background:yellow;-->
+        <!--left:0;-->
+        <!--bottom:-30px;-->
+    <!--}-->
+    <!--.b2{-->
+        <!--top:-15px;-->
+        <!--left:30px;-->
+    <!--}-->
+
+<!--</style>-->
+<!--<div class="container">-->
+
+    <!--<div class="a">-->
+        <!--<div class="a2">a2</div>-->
+    <!--</div>-->
+
+    <!--<div class="b">-->
+        <!--<div class="b2">b2</div>-->
+    <!--</div>-->
+
+<!--</div>-->
+
+<!--====================fixed也拼爹-->
+<!--<style>-->
+    <!--.box{-->
+        <!--width:40px;-->
+        <!--height:40px;-->
+        <!--background:#90FFB7;-->
+        <!--position:relative;-->
+        <!--z-index:1;-->
+    <!--}-->
+    <!--.rl{-->
+        <!--width:40px;-->
+        <!--height:40px;-->
+        <!--background:#ccc;-->
+        <!--position:relative;-->
+    <!--}-->
+    <!--.fix{-->
+        <!--position:fixed;-->
+        <!--left:10px;-->
+        <!--top:0;-->
+        <!--width:120px;;-->
+        <!--background:green;-->
+    <!--}-->
+<!--</style>-->
+<!--<div class="container">-->
+    <!--<div class="box">-->
+        <!--<div class="fix">position:fixed;</div>-->
+    <!--</div>-->
+    <!--<div class="rl"></div>-->
+    <!--<div style="height:2000px;width:5px;background:#F5A8A8;"></div>-->
+<!--</div>-->
+
+<!--====================BFC两栏布局-->
+<!--<style>-->
+<!--.container{-->
+    <!--margin:0 auto;-->
+    <!--width:900px;-->
+    <!--border:1px solid #000;-->
+    <!--background:#ccc;-->
+<!--}-->
+<!--.left{-->
+    <!--width:400px;-->
+    <!--height:400px;-->
+    <!--background:#F5A8A8;-->
+    <!--float:left;-->
+<!--}-->
+<!--.main{-->
+    <!--width:500px;-->
+    <!--height:500px;-->
+    <!--background:#E390FF;-->
+    <!--/*overflow:hidden;*/-->
+<!--}-->
+<!--</style>-->
+
+<!--<div class="container">-->
+
+    <!--<div class="left"></div>-->
+    <!--<div class="main"></div>-->
+
+<!--</div>-->
+
+
+</body>
+</html>
