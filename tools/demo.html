@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小技巧</title>
+    <script src="../jquery/jquery-1.11.3.js"></script>
+</head>
+<body>
+<style>
+    .toTop{
+        position:fixed;
+        bottom:10px;
+        right:10px;
+    }
+</style>
+
+<div class="test" style="width:10px;height:200px;background:red;">test1</div>
+<div class="test" style="width:10px;height:200px;background:red;">test2</div>
+<div class="test" style="width:10px;height:200px;background:red;">test3</div>
+<div class="test" style="width:10px;height:200px;background:red;">test4</div>
+<div class="test" style="width:10px;height:200px;background:red;">test5</div>
+<div class="test" style="width:10px;height:200px;background:red;">test6</div>
+<div class="test" style="width:10px;height:200px;background:red;">test1</div>
+<div class="test" style="width:10px;height:200px;background:red;">test2</div>
+<div class="test" style="width:10px;height:200px;background:red;">test3</div>
+<div class="test" style="width:10px;height:200px;background:red;">test4</div>
+<div class="test" style="width:10px;height:200px;background:red;">test5</div>
+<div class="test" style="width:10px;height:200px;background:red;">test6</div>
+
+<a href="javascript:void(0);" class="toTop">回到顶部</a>
+<script>
+    $('a.toTop').click(function (e) {
+        e.preventDefault();
+        $(document.body).animate({scrollTop: 0}, 800);
+    });
+</script>
+</body>
+</html>
