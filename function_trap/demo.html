@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>function的陷阱</title>
+</head>
+<body>
+<p>
+    <br/>1.函数式声明，在JS解析时，会被编译器进行“函数提升”（只要不是在新的作用域里进行的函数，跟if、else无关，都会进行提升）
+    <br/>2.函数表达式创建的function，其表达式内容是在JS运行时（不是解析时）才能确定，（解析式，只会提升var functionName；）
+    <br/>3.函数声明不走寻常路（不理会if/else等东东），但函数表达式走寻常路（即按照if/else来，总结：只要沾染了表达式的function，就不会被函数提升）
+    <br/>简而言之：函数声明、变量声明，都会被“置顶”，若对象未声明也未置顶，而直接调用，则会报错；
+
+</p>
+
+<script>
+//示例1（if else没有新作用域，一定是后者覆盖前者，跟逻辑判断无关）
+//    foo();
+//    if(true) {
+//        function foo() {
+//            alert(1);
+//        }
+//    } else {
+//        function foo() {
+//            alert(2);
+//        }
+//    }
+//================================
+
+//示例2（新作用域）
+//    test();
+//    (function() {
+//        function test() {
+//            alert(1);
+//        }
+//
+//        function test() {
+//            alert(2);
+//        }
+//    })();
+//    test();
+//================================
+
+//非匿名函数的函数表达式
+//    expressFunction();
+//    var a = function expressFunction() {
+//        alert('expressFunction');
+//    };
+//================================
+
+//函数提升
+//(function(){
+//    console.log(myvar);
+//    myvar = 1;
+//})();
+//等价于
+//var myvar = '变量值';
+//(function(){
+//    var myvar
+//    console.log(myvar);
+//    myvar = 1;
+//})();
+//==================================
+
+var myvar = '变量值';
+(function() {
+    console.log(myvar); // ?
+    myvar = '内部变量值';
+})();
+console.log(myvar); // ?
+
+
+</script>
+
+
+</body>
+</html>

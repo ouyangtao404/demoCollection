@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>观察者模式</title>
+</head>
+<body>
+<img style="width:200px;margin:0 auto;display:block" src="../img/god&sadan.jpg" alt="天使和撒旦"/>
+<script src="../../jquery/jquery-1.11.3.min.js"></script>
+<script src="../common.js"></script>
+<script src="observer.js"></script>
+<script src="weatherData.js"></script>
+<script src="ForecastDisplay.js"></script>
+<script>
+    var god = new ForecastDisplay({
+        name: 'god'
+    });
+    var sadan = new ForecastDisplay({
+        name: 'sadan'
+    });
+
+    var weatherData = new WeatherData();
+    god.regist(weatherData);
+    sadan.regist(weatherData);
+
+    setInterval(function() {
+        weatherData.updateData();
+    }, 1000);
+
+    setTimeout(function() {
+        sadan.remove(weatherData);//sadan说：要取消订阅气象信息
+    }, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理模式-复习-demo</title>
+</head>
+<body>
+
+代理模式复习
+虚拟代理（点击body才实例化）
+
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+
+<script>
+    //本体
+    function Benti() {
+        this.name = 'Benti';
+    }
+    Benti.prototype.sayHi = function() {
+        alert(this.name);
+    };
+    Benti.prototype.sayHi2 = function() {
+        alert(this.name +'2');
+    };
+
+    function createBenti(callback) {
+        setTimeout(function() {
+            callback(new Benti());
+        }, 3000);
+    }
+
+
+    //代理-虚拟
+    function Proxy(name) {
+        var self = this;
+        this.name = name;
+        this.isReady = false;
+        this.interval = null;
+
+        self.init();
+
+        //给本体方法，套上袖套
+        var fn = Benti.prototype;
+        for(var methodName in fn) {
+            //过滤非function的类型
+            if(typeof fn[methodName] !== 'function') {return;}
+
+            //形成一个闭包，能把methodName存在
+            (function(methodName) {
+                Proxy.prototype[methodName] = function() {
+
+                    //若未实例化本体，则不执行
+                    if(self.isReady !== true) {
+                        throw new Error('本体还未实例化');
+                        return;
+                    }
+                    return fn[methodName].call(self);
+                };
+            })(methodName);
+        }
+    }
+    Proxy.prototype = {
+        //实例化本体
+        init: function() {
+            var self = this;
+
+            //创建
+            createBenti(function(shili) {
+                self.shili = shili;
+            });
+
+            //定时检测
+            self.interval = setInterval(function() {
+                self.checkInit();
+            }, 100);
+
+            console.log('init');
+        },
+        checkInit: function() {
+            var self = this;
+            if(self.shili !== undefined) {
+                //清理定时器
+                clearInterval(self.interval);
+                this.isReady = true;
+            }
+        }
+    };
+
+    var instance = new Proxy('Baohe');
+
+</script>
+</body>
+</html>

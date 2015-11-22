@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理模式-demo</title>
+</head>
+<body>
+
+虚拟代理模式
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+<script src="common.js"></script>
+
+<script>
+   /**
+    * 动态代理，作为代理的模板，不直接使用
+    * @constructor
+    * 1.初始化本体的工作，不在构造函数中有
+    * 2.本体不直接指代，而以this.class来代表
+    */
+   function DynamicProxy() {
+        var self = this;
+        this.isReady = false;
+        this.interval = false;
+
+        //检测本体(class)类型
+        if(typeof(this.class) == 'function') {
+            throw new Error('class不是构造函数，不合法');
+            return;
+        }
+
+        //将本体(class)原型上的方法，都套上代理的方法
+        var fn = this.class.prototype;
+        for(var methodName in fn) {
+            (function(methodName) {
+                //滤去非function
+                if(typeof fn[methodName] !== 'function') {return;}
+
+                //套上方法
+                self[methodName] = function() {
+                    if(self.isReady == false) {return;}
+                    //比如用return，否则调用的时候，得不到返回值（函数有3种类型，a执行、b返回值、c回调）
+                    return fn[methodName].apply(self, arguments);
+                };
+            })(methodName);
+        }
+
+   }
+
+   $.extend(DynamicProxy.prototype, {
+       _init: function() {
+           var self = this;
+
+            //开始实例化本体
+            createBenti(function(shili) {
+                self.shili = shili;
+            });
+
+            //定时检测实例是否完成
+            this.interval = setInterval(function() {
+                self._checkInit();
+            }, 100);
+       },
+
+       //负责检测实例是否完成，若完成同步状态
+       _checkInit: function() {
+            var self = this;
+            if(self._isInited()) {
+                self.isReady = true;
+                clearInterval(self.interval);
+            }
+       },
+       _isInited: function() {
+           var self = this;
+           if(self.shili != undefined) {
+               return true;
+           }
+           return false;
+       }
+   });
+   //================================================
+
+
+   //本体
+   function Benti() {
+       this.name = 'benti';
+   }
+   Benti.prototype.doSth = function() {
+       console.log('success do something!');
+   };
+
+   function createBenti(callback) {
+       this.name = 'benti';
+
+       setTimeout(function() {
+           var shili = new Benti();
+           callback(shili);
+       }, 3000);
+   }
+
+   var TestProxy = function() {
+       this.class = DynamicProxy;
+   };
+
+   TestProxy.prototype._isInited = function() {
+        if(this.shili == undefined) {
+            return false;
+        }
+        return true;
+   };
+
+   //================================================
+
+
+
+
+   //================================================
+   //test
+   function Superclass() {}
+   Superclass.prototype.do = function() {
+       console.log('do something from Superclass');
+   };
+
+   function Class() {
+       this.name = '我是子类的实例化成员';
+   }
+   Class.prototype.do2 = function() {
+       console.log('do something from Class');
+   };
+
+   extend(Class, Superclass);
+
+   var test = new Class();
+   console.log(test.constructor);
+   test.do();
+   test.do2();
+
+</script>
+</body>
+</html>
