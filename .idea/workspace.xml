@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="7642c1da-8891-40f2-aa02-d0fc03c8751d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="demoCollection.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,7 +40,7 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="28" selection-start="178" selection-end="178" vertical-scroll-proportion="0.19077902" vertical-offset="0" max-vertical-offset="629">
+            <state line="10" column="6" selection-start="186" selection-end="186" vertical-scroll-proportion="0.23847377" vertical-offset="0" max-vertical-offset="629">
               <folding />
             </state>
           </provider>
@@ -485,7 +484,7 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="28" selection-start="178" selection-end="178" vertical-scroll-proportion="0.19077902" vertical-offset="0" max-vertical-offset="629">
+        <state line="10" column="6" selection-start="186" selection-end="186" vertical-scroll-proportion="0.23847377" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
