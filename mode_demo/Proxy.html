@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理模式-demo</title>
+</head>
+<body>
+
+代理模式
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+
+<script>
+
+    //继承 去学习这个继承函数的实现原理
+    function extend(tar, parent) {
+        //todo
+    }
+
+//web服务通用模式
+function webServerProxy() {
+    //this.xhrHandler = XhrManager.createXhrHandler();
+}
+webServerProxy.protoType = {
+    _fetchDate: function(url, method, data, callback) {
+        var self = this;
+        $.ajax({
+            url     : url,
+            method  : method,
+            data    : data,
+            success : callback,
+            dateType: 'json'
+        });
+    }
+};
+
+//代理
+var StatsProxy = function(){};
+console.log(webServerProxy.protoType);
+extend(StatsProxy, webServerProxy);
+//
+//$.extend(StatsProxy.prototype, {
+//    getDateType1: function(method, startDate, endDate, callback) {
+//        var url = 'date/dt.json?t1';
+//        var dt = {
+//            startDate   : startDate,
+//            endDate     : endDate
+//        };
+//        this._fetchDate(url, method, dt, callback);
+//    },
+//    getDateType2: function(method, startDate, endDate, callback) {
+//        var url = 'date/dt.json?t2';
+//        var dt = {
+//            startDate   : startDate,
+//            endDate     : endDate
+//        };
+//        this._fetchDate(url, method, dt, callback);
+//    }
+//});
+
+StatsProxy.prototype.getDateType1 = function(method, startDate, endDate, callback) {
+    var url = 'date/dt.json?t1';
+    var dt = {
+        startDate   : startDate,
+        endDate     : endDate
+    };
+    this._fetchDate(url, method, dt, callback);
+};
+
+StatsProxy.prototype.getDateType2 = function(method, startDate, endDate, callback) {
+    var url = 'date/dt.json?t2';
+    var dt = {
+        startDate   : startDate,
+        endDate     : endDate
+    };
+    this._fetchDate(url, method, dt, callback);
+};
+
+var foo = new StatsProxy();
+foo.getDateType1('post', '20151105','20151111', function(dt) {
+    console.log(dt);
+});
+
+for(var p in foo) {
+    console.log(p);
+}
+
+</script>
+</body>
+</html>

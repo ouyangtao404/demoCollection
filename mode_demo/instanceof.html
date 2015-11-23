@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试instance-demo</title>
+</head>
+<body>
+
+验证instanceof函数的结果，受什么的影响
+<br/>实验1：是否受constructor影响？
+<br/>测试方法：如Foo,实例化之后，改变实例原型链上的constructor, 再测试实例是否instanceof Foo为true
+<br/>测试环境：chrome 版本 46.0.2490.71 (64-bit)
+<br/>解释结果：不受constructor的影响
+
+<br/>实验2：只受到实例化时候的new操作符后的类型影响？
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+<script src="common.js"></script>
+
+<script>
+    //实验1
+//    var foo = new Foo();
+//
+//    function Foo() {}
+//    function Test() {}
+
+//    var con = foo.__proto__.constructor;
+//    console.log(con);
+//    console.log(foo instanceof(Foo));//true
+    //修改con
+//    Foo.constructor = Test;
+//    console.log(foo instanceof(Foo));//true
+
+
+//    function SuperType() {
+//        this.className = 'Super';
+//    }
+//    function SubType() {
+//        this.className = 'Sub';
+//    }
+//    extend(SubType, SuperType);
+//    var instance = new SubType();
+//    console.log(instance);
+
+    function SuperType() {
+        this.className = 'Super';
+    }
+    function SubType() {
+        this.className = 'Sub';
+    }
+    extend(SubType, SuperType);
+
+    function SubType2() {
+        this.className = 'Sub2';
+    }
+    extend(SubType2, SubType);
+
+    var instance = new SubType2();
+    console.log(instance);
+
+//====================================
+//    function Super2() {
+//
+//    }
+//    function Sub2() {
+//
+//    }
+//    Sub2.prototype = new Super2();
+//    var instance2 = new Sub2();
+//    console.log(instance2);
+//    console.log(instance2.__proto__);
+//    console.log(instance2.__proto__.__proto__);
+//    console.log(instance2.__proto__.__proto__.__proto__);
+
+    //多加一层继承
+//    function Super2() {
+//
+//    }
+//    function Sub2() {
+//
+//    }
+//    Sub2.prototype = new Super2();
+//
+//    function Sub22() {
+//
+//    }
+//    Sub22.prototype = new Sub2();
+//
+//    var instance2 = new Sub22();
+//    console.log(instance2);
+//    console.log(instance2.__proto__);
+//    console.log(instance2.__proto__.__proto__);
+//    console.log(instance2.__proto__.__proto__.__proto__);
+
+    function Test(){}
+    Test.prototype = new Object();
+    console.log(new Test().__proto__);
+
+</script>
+</body>
+</html>

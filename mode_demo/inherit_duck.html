@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承-demo（《设计模式》）</title>
+</head>
+<body>
+<br/>代码以鸭子为例（鸭子、绿头鸭、飞行行为类）
+<br/>设计原则：
+<br/>1.可能变化的代码，要与不会变化的代码分开。（分离变与不变）
+<br/>2.面向接口编程，不要面向实现编程（还不是太理解）
+<br/>
+<br/>
+<script src="../jquery/jquery-1.11.3.js"></script>
+<script src="common.js"></script>
+
+<script>
+//鸭子类==============================================
+    //鸭
+    function Duck() {
+        this.flyBehavior = new FlyBehavior();
+    }
+    Duck.prototype.performFly = function() {
+        this.flyBehavior.fly();
+    };
+    Duck.prototype.swim = function() {
+        console.log('游呀游~');
+    };
+    Duck.prototype.setFlyBehavior = function(flyBehaviorInstance) {
+        this.flyBehavior = flyBehaviorInstance;
+    };
+
+
+    //绿头鸭
+    function MallardDuck() {
+        this.flyBehavior = new FlyWithWings();
+    }
+    extend(MallardDuck, Duck);
+
+    //模型鸭
+    function ModelDuck() {
+        this.flyBehavior = new FlyNoWay();
+    }
+    extend(ModelDuck, Duck);
+
+
+
+//飞行行为类==============================================
+    //todo 接口
+    function FlyBehavior() {
+        //todo
+        this.className = '';
+    }
+    FlyBehavior.prototype.fly = function() {
+        //todo
+    };
+
+    //飞不了类
+    function FlyNoWay() {
+        this.className = 'FlyBehavior';
+    }
+    extend(FlyNoWay, FlyBehavior);
+    FlyNoWay.prototype.fly = function() {
+        console.log('飞不了');
+    };
+
+    //双翼飞翔类
+    function FlyWithWings() {
+        this.className = "FlyWithWings";
+    }
+    extend(FlyWithWings, FlyBehavior);
+    FlyWithWings.prototype.fly = function() {
+        console.log('比翼高飞中~');
+    };
+
+    //利用火箭飞行类
+    function FlyRocketPowered() {
+        this.className = "FlyRocketPowered";
+    }
+    extend(FlyRocketPowered, FlyBehavior);
+    FlyRocketPowered.prototype.fly = function() {
+        console.log('坐火箭飞啦！！！~');
+    };
+
+//鸭子实例==============================================
+//    var mallard = new MallardDuck();
+//    console.log(mallard);
+//    mallard.performFly();
+
+//动态设定行为==============================================
+    //假设把绿头鸭的翅膀砍掉了
+//    mallard.setFlyBehavior(new FlyNoWay());
+//    mallard.performFly();
+
+    //模型鸭子坐火箭
+    var model = new ModelDuck();
+    model.performFly();
+    model.setFlyBehavior(new FlyRocketPowered());
+    model.performFly();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理模式-demo</title>
+</head>
+<body>
+
+虚拟代理模式
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+
+<script>
+   //本体
+   function Benti() {
+       this.name = 'benti';
+   }
+   Benti.prototype.doSth = function() {
+       console.log('success do something!');
+   };
+
+   function createBenti(callback) {
+        this.name = 'benti';
+
+       setTimeout(function() {
+           var shili = new Benti();
+           callback(shili);
+       }, 3000);
+   }
+
+
+   //代理
+   function Proxy() {
+        var self = this;
+        this.isReady = false;
+        this.interval = false;
+
+        //设置本体实例化的触发时机
+        $('body').on('click', function(e) {
+            console.log('body click');
+            self._init();
+        });
+
+   }
+   $.extend(Proxy.prototype, {
+       _init: function() {
+           var self = this;
+
+            //开始实例化本体
+            createBenti(function(shili) {
+                self.shili = shili;
+            });
+
+            //定时检测实例是否完成
+            this.interval = setInterval(function() {
+                self._checkInit();
+            }, 100);
+       },
+
+       //负责检测实例是否完成，若完成同步状态
+       _checkInit: function() {
+            var self = this;
+            if(self._isInited()) {
+                self.isReady = true;
+                clearInterval(self.interval);
+            }
+       },
+       _isInited: function() {
+           var self = this;
+           if(self.shili != undefined) {
+               return true;
+           }
+           return false;
+       },
+       doSth: function() {
+           if(!this.isReady) {
+               console.log('isReady is false');
+               return;
+           }
+           this.shili.doSth.call(self);
+       }
+   });
+
+    var foo = new Proxy();
+
+    setInterval(function() {
+        foo.doSth();
+    }, 1000);
+
+</script>
+</body>
+</html>

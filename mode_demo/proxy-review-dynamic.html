@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>代理模式-复习-demo</title>
+</head>
+<body>
+
+代理模式复习
+虚拟代理（点击body才实例化）
+
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+<script src="common.js"></script>
+
+<script>
+    //本体======================================================
+    function Benti() {
+        this.name = 'Benti';
+    }
+    function Benti2() {
+        this.name = 'Benti2';
+    }
+    Benti.prototype.sayHi = function() {
+        alert(this.name);
+    };
+    Benti.prototype.sayHi2 = function() {
+        alert(this.name +'2');
+    };
+
+    function createClass(cl, callback) {
+        setTimeout(function() {
+            callback(new cl());
+        }, 3000);
+    }
+
+    //代理-虚拟======================================================
+    function DynamicProxy() {
+        var self = this;
+        this.args = arguments;
+        this.isReady = false;
+        this.interval = null;
+
+        //检测class是function类型
+        if(typeof this.class !== 'function') {
+            throw new Error('本体不是类');
+            return;
+        }
+
+        //给本体方法，套上袖套
+        var fn = Benti.prototype;
+        for(var methodName in fn) {
+            //过滤非function的类型
+            if(typeof fn[methodName] !== 'function') {return;}
+
+            //形成一个闭包，能把methodName存在
+            (function(methodName) {
+                self[methodName] = function() {
+
+                    //若未实例化本体，则不执行
+                    if(self.isReady !== true) {
+                        throw new Error('本体还未实例化');
+                        return;
+                    }
+                    return fn[methodName].call(self);
+                };
+            })(methodName);
+        }
+    }
+    DynamicProxy.prototype = {
+        //实例化本体
+        init: function() {
+            var self = this;
+            //创建触发loading(true)
+            createClass(this.class, function(shili) {
+                self.shili = shili;
+            });
+
+            //定时检测
+            self.interval = setInterval(function() {
+                self.updateStatus();
+            }, 100);
+
+            console.log('init');
+        },
+        updateStatus: function() {
+            var self = this;
+            if(self._isInitialized()) {
+                //清理定时器
+                clearInterval(self.interval);
+                this.isReady = true;
+                //创建确认完成 loading(false)
+            }
+        },
+        _isInitialized: function() {
+            throw new Error('请在代理函数中配置_isInitialized函数，函数内返回布尔值')
+        }
+    };
+
+    //具体的代理======================================================
+    function TestProxy(name) {
+        var self = this;
+        self.class = Benti;
+        DynamicProxy.call(self, arguments);
+        self.name = name;
+        self.init();
+    }
+
+    extend(TestProxy, DynamicProxy);
+
+    //为什么要checkInit暴露出来？
+    TestProxy.prototype._isInitialized = function() {
+        var self = this;
+        if(self.shili !== undefined) {
+            return true;
+        }
+        return false;
+    };
+
+    //实例化 ======================================================
+    var instance = new TestProxy('ouyangtao');
+    console.log(instance);
+
+
+</script>
+</body>
+</html>

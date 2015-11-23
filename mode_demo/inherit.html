@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承-demo</title>
+</head>
+<body>
+
+原型链继承
+
+<script src="../jquery/jquery-1.11.3.js"></script>
+
+<script>
+    function Test() {
+        this.name="Type"
+    }
+    var test = new Test();
+//    console.log(Test.prototype);
+//================================
+
+    function SuperType() {
+        this.property = true;
+        this.array = [1];
+    }
+    SuperType.prototype.getSuperValue = function() {
+        return this.property;
+    };
+
+    function SubType() {
+        this.subProperty = false;
+    }
+    var st = new SuperType();
+    SubType.prototype = st;
+
+    //给子类添加新方法
+    SubType.prototype.getSubValue = function() {
+        return this.subProperty;
+    };
+    //改写超类的方法
+//    SubType.prototype.getSuperValue = function() {
+//        return false;
+//    };
+
+//    var instance = new SubType();
+//    console.log(st);
+
+    var instance1 = new SubType();
+    var instance2 = new SubType();
+//    instance1.property = false;
+//    instance1.array.push(2);
+//    console.log(instance1.property);
+//    console.log(instance2.property);
+//
+//    console.log(instance1.array);
+//    console.log(instance2.array);
+
+    console.log(instance1.property === instance2.property);
+    console.log(instance1.getSuperValue === instance2.getSuperValue);
+//    console.log(instance2.getSuperValue);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调试技巧</title>
+</head>
+<body>
+<script src="../jquery/jquery-1.11.3.js"></script>
+<button class="J_ajax">ajax</button>
+<button>a</button>
+<button>b</button>
+<button>c</button>
+<script>
+//    $('body').delegate('button', 'click', function(e) {
+//        console.log(123);
+//    });
+
+    //避免记录引用类型
+//    var wallets = [{ amount: 0 }];
+//
+//    setInterval( function() {
+//        console.log( wallets, wallets[0], wallets[0].amount );
+//        wallets[0].amount += 100;
+//    }, 1000 );
+
+
+//    //表格记录
+//    console.table([
+//        {
+//            id: 1,
+//            name: 'John',
+//            address: 'Bay street 1'
+//        },
+//        {
+//            id: 2,
+//            name: 'Jack',
+//            address: 'Valley road 2.'
+//        },
+//        {
+//            id: 3,
+//            name: 'Jim',
+//            test1: function() {},
+//            test2: 2,
+//            address2: 'Hill street 3.'
+//        }
+//    ]);
+
+//    $('.J_ajax').on('click', function(e) {
+//
+//        function test() {
+//            console.log('test');
+//        }
+//        var url = 'http://0.0.0.0:8080/other_demo/dt.json?test';
+//        var url = 'https://www.baidu.com/';
+//
+//        $.ajax({
+//            url:url,
+//            data: {a:2},
+//            method:'get',
+//            success: function(dt) {
+//                console.log(dt);
+//            },
+//            error: function(e) {
+//                console.log('error');
+//            },
+//            dataType:'json'
+//        });
+//    });
+
+
+    //跟踪
+//    var f = function() { g(); }
+//    var g = function() {h();}
+//    var h = function() {
+//
+//        console.trace('看看我走过的路trace')
+//        debugger;
+//    };
+//
+//    f();
+
+    //分组
+//    console.group("app.foo");
+//    console.log("来自foo模块的信息 blah blah blah...");
+//        console.group("app.foo2");
+//        console.log("2来自foo模块的信息 blah blah blah...");
+//        console.groupEnd();
+//    console.groupEnd();
+
+    //穿嫁衣、连接
+//    console.log('%c我是欧阳涛', 'color:red;font-size:20px;', '今年20岁', '我喜欢阅读');
+
+    //断言
+//    var isGood = false;
+//    console.assert(isGood, 'isGood为false时打印');
+
+    //计数
+//    var i = 0;
+//    while(i++ < 100) {
+//        console.count('g 被执行的次数：');
+//    }
+//    console.count('g 被执行的次数：');
+//    console.count('g 被执行的次数：');
+
+    //计时
+//    console.time('操作a');
+//    setTimeout(function() {
+//        console.timeEnd('操作a');
+//    }, 500);
+//
+//    var t1 = new Date().getTime();
+//    setTimeout(function() {
+//        var t2 = new Date().getTime();
+//        console.warn(t2-t1);
+//    }, 500);
+
+
+
+
+</script>
+</body>
+</html>
