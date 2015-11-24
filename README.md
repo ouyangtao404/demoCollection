@@ -21,3 +21,5 @@ devtext2
 test
 
 test2
+
+half of work
