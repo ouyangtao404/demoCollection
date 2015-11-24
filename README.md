@@ -23,3 +23,5 @@ test
 test2
 
 done of work
+
+1 half of work
