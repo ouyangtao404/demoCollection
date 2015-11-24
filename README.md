@@ -24,4 +24,4 @@ test2
 
 done of work
 
-1 half of work
+1 done of work
