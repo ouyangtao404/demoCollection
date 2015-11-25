@@ -2,31 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="846b9c3e-b727-434c-b1b3-a2e450e239ad" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/img/god&amp;sadan.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/oberver/ForecastDisplay.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/Proxy.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/common.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/function_trap/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other_demo/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/style_demo/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tools/demo.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/date/dt.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other_demo/dt.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/inherit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/inherit_duck.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/instanceof.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery/jquery-1.11.3.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/jquery/jquery-1.11.3.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/oberver/observer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/oberver/obsever.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/proxy-review-dynamic.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/proxy-review.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/proxy-xuni.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/proxy-xuni2.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/mode_demo/oberver/weatherData.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other_demo/boxshadow.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other_demo/debugger.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/other_demo/position.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/common/reset.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\work\demoCollection\other_demo\demo.html" afterPath="$PROJECT_DIR$/other_demo/csstest.html" />
     </list>
     <ignored path="demoCollection.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,10 +30,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
+      <file leaf-file-name="boxshadow.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/other_demo/boxshadow.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.06312292" vertical-offset="0" max-vertical-offset="602">
+            <state line="20" column="26" selection-start="481" selection-end="481" vertical-scroll-proportion="0.3641115" vertical-offset="171" max-vertical-offset="1026">
               <folding />
             </state>
           </provider>
@@ -77,13 +58,18 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/other_demo/csstest.html" />
+        <option value="$PROJECT_DIR$/common/reset.css" />
+        <option value="$PROJECT_DIR$/other_demo/position.html" />
+        <option value="$PROJECT_DIR$/other_demo/box-shadow.html" />
+        <option value="$PROJECT_DIR$/other_demo/boxshadow.html" />
       </list>
     </option>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="180" />
-    <option name="y" value="-916" />
+    <option name="x" value="101" />
+    <option name="y" value="-931" />
     <option name="width" value="1320" />
     <option name="height" value="784" />
   </component>
@@ -113,7 +99,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -134,12 +119,32 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\work\demoCollection\other_demo" />
+    </key>
   </component>
   <component name="RunManager">
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
     <list size="0" />
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
@@ -152,27 +157,27 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="180" y="-916" width="1320" height="784" extended-state="0" />
+    <frame x="101" y="-931" width="1320" height="784" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24960254" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2490242" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26152623" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -187,9 +192,78 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/other_demo/position.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_demo/position.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="25" selection-start="92" selection-end="92" vertical-scroll-proportion="0.0" vertical-offset="76" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="190" max-vertical-offset="304">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_demo/csstest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="114" max-vertical-offset="817" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.06312292" vertical-offset="0" max-vertical-offset="602">
+        <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="152" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="9" selection-start="62" selection-end="62" vertical-scroll-proportion="0.06291391" vertical-offset="0" max-vertical-offset="604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_demo/debugger.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="18" selection-start="212" selection-end="212" vertical-scroll-proportion="0.296875" vertical-offset="0" max-vertical-offset="2413" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/reset.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="1" selection-start="195" selection-end="195" vertical-scroll-proportion="0.31456953" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_demo/position.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="0" selection-start="33" selection-end="33" vertical-scroll-proportion="0.032986112" vertical-offset="19" max-vertical-offset="1140">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_demo/csstest.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="7" selection-start="0" selection-end="661" vertical-scroll-proportion="-4.071429" vertical-offset="0" max-vertical-offset="817">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/other_demo/boxshadow.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="26" selection-start="481" selection-end="481" vertical-scroll-proportion="0.3641115" vertical-offset="171" max-vertical-offset="1026">
           <folding />
         </state>
       </provider>
