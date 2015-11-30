@@ -1,2 +1,0 @@
-LICENSE string
-test111

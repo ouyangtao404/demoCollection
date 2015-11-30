@@ -2,21 +2,264 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>定位汇总(未知图片尺寸)</title>
 </head>
-<body>
-
-<div style="height:1000px;width:10px;background: red;"></div>
-<a href="javascript:void(alert(1));">顶部</a>
-
-<script>
-    function joke() {
-        var undefined = "hello world";
-        console.log(undefined); //会输出"hello world"
+<link rel="stylesheet" href="../common/reset.css"/>
+<link rel="stylesheet" href="../common/common.css"/>
+<style>
+    body{
+        background: url(../materials/bgone.jpeg) repeat 0 0;
     }
-    var undefined = "hello world";
-    window.undefined = 123;
-    console.log(window.undefined); //输出undefined
-</script>
+    .floor_one{
+        background:#fff;
+        overflow:hidden;
+        border:1px solid red;
+        margin-bottom:10px;
+    }
+    .title{
+        margin-top:40px;
+        display:block;
+    }
+    .title:first-of-type{
+        margin-top:0;
+    }
+
+    .box{
+        width:100px;
+        height:100px;
+        background:#ccc;
+        float:left;
+        border:1px solid #000;
+        margin-left:5px;
+    }
+</style>
+<body>
+<div class="floor_one">
+    <h1 class="title">
+        <br/>图片尺寸位置~！
+        <br/>父容器可能会变化的（多分辨率适配）
+    </h1>
+</div>
+
+<div class="floor_one floor_one_center">
+    <h2 class="title">水平text-align:center;</h2>
+    <style>
+        .floor_one_center .box{
+            text-align:center;
+        }
+        .floor_one_center img{
+        }
+        .floor_one_center .i1{
+            max-width:50px;
+            max-height:50px;
+        }
+        .floor_one_center .i2{
+            max-width:50%;
+            max-height:50%;
+        }
+    </style>
+
+    <div class="list clearfix">
+        <div class="box">
+            <img class="i1" src="../materials/goods1.png"/>
+        </div>
+        <div class="box">
+            <img class="i2" src="../materials/goods4.png"/>
+        </div>
+        <div class="box">
+            <span class="con">我是文字</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="floor_one floor_one_vt">
+    <h2 class="title">垂直vertical-align:middle;
+        <p style="color:red;">必须有2个容器分别为：table和table-cell</p>
+        <p style="color:red">百分比不准，怎么破？</p>
+    </h2>
+    <style>
+        .floor_one_vt .boxBig{
+            height:100px;
+            width:100px;
+            overflow:hidden;
+        }
+        .floor_one_vt .box{
+            height:100px;
+            width:100px;
+            display:table;
+            table-layout:fixed
+        }
+        .floor_one_vt .box .boxCon{
+            display:table-cell;
+            /*下面期望能用百分比*/
+            height:100px;
+            overflow:hidden;
+        }
+        .floor_one_vt .box .boxCon_bottom{
+            vertical-align:bottom;
+        }
+        .floor_one_vt .box .boxCon_middle{
+            vertical-align:middle;
+        }
+        .floor_one_vt .box .boxCon_top{
+            vertical-align:top;
+        }
+        .floor_one_vt .box .boxCon_baseline{
+            vertical-align:baseline;
+        }
+        .floor_one_vt .box img{
+            max-height:50%;
+            max-width:50%;
+            height:100%;
+            font-size:0;
+        }
+    </style>
+
+    <div class="box">
+        <span class="boxCon boxCon_bottom">
+            <img class="boxCon boxCon_bottom" src="../materials/goods4.png"/>
+        </span>
+    </div>
+
+    <div class="box">
+        <span class="boxCon boxCon_middle">
+            <img src="../materials/goods4.png"/>
+        </span>
+    </div>
+    <div class="box">
+        <span class="boxCon boxCon_top">
+            <img src="../materials/1080.png"/>
+        </span>
+    </div>
+    <div class="box">
+        <span class="boxCon" style="vertical-align:-95%;">
+            <img src="../materials/goods4.png"/>
+        </span>
+    </div>
+    <div class="box">
+        <span class="boxCon boxCon_middle">
+            我是文字middle
+        </span>
+    </div>
+    <div class="box">
+        <span class="boxCon boxCon_baseline">
+            我是文字baseline
+        </span>
+    </div>
+</div>
+
+
+<div class="floor_one floor_one_line">
+    <h2 class="title">垂直 line-height:150px;</h2>
+    <style>
+        .floor_one_line .box{
+            line-height:150px;
+            text-align:center;
+        }
+        .floor_one_line .box img{
+            max-height:50%;
+            max-width:50%;
+        }
+    </style>
+    <div class="box">
+        <img src="../materials/goods1.png"/>
+    </div>
+    <div class="box">
+            <img src="../materials/goods2.png"/>
+    </div>
+    <div class="box">
+            <img src="../materials/goods3.png"/>
+    </div>
+    <div class="box">
+            我是文字middle
+    </div>
+    <div class="box">
+            我是文字baseline
+    </div>
+</div>
+
+<div class="floor_one floor_one_position">
+    <h2 class="title">上下左右居中:position
+        <p style="color:red;">需要margin-left:图片宽度一半（需要先得知图片宽度才可行）</p>
+        <p style="color:red;">而且对于瘦高型的图片，不好适配</p>
+        <p style="color:red;">可以考虑配合js去算</p>
+    </h2>
+    <style>
+        .floor_one_position .box{
+            position:relative;
+        }
+        .floor_one_position img{
+            position:absolute;
+            left:50%;
+            /*max-height: 50%;*/
+            /*max-width: 50%;*/
+            width:50px;
+            margin-left:-25px;
+        }
+    </style>
+
+    <div class="list clearfix">
+        <div class="box">
+            <img src="../materials/goods1.png"/>
+        </div>
+        <div class="box">
+            <img src="../materials/goods2.png"/>
+        </div>
+        <div class="box">
+            <img src="../materials/goods3.png"/>
+        </div>
+        <div class="box">
+            <div class="boxCon">
+            <span class="con">
+                <img src="../materials/goods4.png"/>
+            </span>
+            </div>
+        </div>
+        <div class="box">
+            <span class="con">我是文字哈哈哈啊</span>
+        </div>
+    </div>
+</div>
+
+<div class="floor_one">
+    <h2 class="title">测试</h2>
+    <style>
+        .box2{
+            height:100%;
+            overflow:hidden;
+        }
+        .box2 img{
+            height:50%;
+        }
+    </style>
+    <div class="box2">
+        <!--<span class="con2">-->
+        <img src="../materials/goods4.png"/>
+        <!--</span>-->
+    </div>
+    <img src="../materials/goods4.png"/>
+</div>
+
+<div class="floor_one">
+    <h2 class="title">容器是响应式的</h2>
+    <div class="list clearfix">
+        <div class="box">
+            <img src="../materials/goods1.png"/>
+        </div>
+        <div class="box">
+            <img src="../materials/goods2.png"/>
+        </div>
+        <div class="box">
+            <img src="../materials/goods3.png"/>
+        </div>
+        <div class="box">
+            <img src="../materials/goods4.png"/>
+        </div>
+    </div>
+</div>
+
+
+<script src="../jquery/jquery-1.11.3.min.js"></script>
 </body>
 </html>
