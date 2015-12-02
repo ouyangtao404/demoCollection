@@ -1,5 +1,7 @@
 <!doctype html>
 <html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
 <head>
     <meta charset="UTF-8">
     <title>移动端布局示例</title>
@@ -8,11 +10,66 @@
 <link rel="stylesheet" href="/_common/common/common.css"/>
 <style>
     /*全局样式*/
+    .maxwidth{
+        max-width:720px;
+    }
 </style>
+<h1>缩放式模块，测试demo</h1>
 
+<style>
+    .floor_one_banner .imgCon{
+        display:block;
+        width:100%;
+        margin:0 auto;
+    }
+    .floor_one_banner img{
+        width:100%;
+        display:block;
+    }
+</style>
+<div class="floor_one floor_one_banner">
+    <a class="imgCon" href="#">
+        <img src="/_common/materials/640.png" alt=""/>
+    </a>
+</div>
+<div class="floor_one floor_one_banner">
+    <a class="imgCon maxwidth" href="#">
+        <img src="/_common/materials/640.png" alt=""/>
+    </a>
+</div>
 
-<div class="floor_one">
-
+<style>
+    .floor_one_2img .floor_one_con{
+        width:100%;
+        margin:0 auto;
+    }
+    .floor_one_2img .imgCon{
+        width:50%;
+        float:left;
+    }
+    .floor_one_2img img{
+        width:100%;
+        display:block;
+    }
+</style>
+<div class="floor_one floor_one_2img">
+    <div class="floor_one_con maxwidth clearfix">
+        <a class="imgCon" href="#">
+            <img src="/_common/materials/256.png" alt=""/>
+        </a>
+        <a class="imgCon" href="#">
+            <img src="/_common/materials/shaseng.gif" alt=""/>
+        </a>
+        <a class="imgCon" href="#">
+            <img src="/_common/materials/256.png" alt=""/>
+        </a>
+        <a class="imgCon" href="#">
+            <img src="/_common/materials/shaseng.gif" alt=""/>
+        </a>
+        <a class="imgCon" href="#">
+            <img src="/_common/materials/256.png" alt=""/>
+        </a>
+    </div>
 </div>
 
 <script src="/_common/jquery/jquery-1.11.3.min.js"></script>
