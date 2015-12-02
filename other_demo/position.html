@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取元素位置</title>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+</head>
+<style>
+    body{
+        position:relative;
+        padding-top:1200px;
+    }
+
+    .parent{
+        width:100px;
+        height:100px;
+        background:green;
+        margin:0 0 0 20px;
+        padding:20px;
+        position:relative;
+    }
+    .son{
+        width:50px;
+        height:50px;
+        background:red;
+        border:10px solid #ccc;
+    }
+    .follow{
+        background:blue;
+        width:10px;
+        height:10px;
+        border-radius:5px;;
+        position:absolute;
+        top:0;
+        left:0;
+    }
+</style>
+<body>
+<div class="follow"></div>
+<div class="parent">
+    <div class="son">
+        content
+    </div>
+</div>
+<script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+<script>
+    var tar = $('.son');
+    var pos = tar.offset();
+    $('.follow').css(pos);
+    var offsetParent = tar.offsetParent();
+    console.log('%c有定位信息的父元素为：', "font-size:18px;color:red;")
+    console.log(offsetParent);
+</script>
+</body>
+</html>

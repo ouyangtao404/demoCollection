@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>聚光灯</title>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+</head>
+<body>
+测试内容：
+固定宽度的容器里，100%宽度的子元素的边框
+可以利用边框做聚光灯效果~
+<br/>
+1.box-sizing:border-box;会让边框算在内容里（默认是content-box不算边框）
+<br/>
+2.其次是没有设置宽度
+<br/>
+3.记得hover的index要比非hover设置高一点
+
+<style>
+    .con{
+        width:200px;
+        margin:40px auto;
+        border:5px solid red;
+    }
+    .box{
+        /*box-sizing:border-box;*/
+        position:relative;
+        z-index:1;
+    }
+    .box100{
+        width:100%;
+    }
+    .box-border{
+        box-sizing:border-box;
+        /*box-sizing:content-box;*/
+    }
+    .box-border:hover,
+    .box:hover{
+        border:20px solid blue;
+        margin:-20px;
+        z-index:2;
+    }
+    .box img{
+        display:block;
+    }
+
+</style>
+<div class="con">
+    <div class="box">
+        <img style="width:100%;" src="https://img.alicdn.com/tps/i4/TB1SOasJVXXXXcWXVXXvKyzTVXX-520-280.jpg" alt="">
+    </div>
+    <div class="box box100">
+        <img style="width:100%;" src="https://img.alicdn.com/tps/i4/TB1SOasJVXXXXcWXVXXvKyzTVXX-520-280.jpg" alt="">
+    </div>
+    <div class="box box100 box-border">
+        <img style="width:100%;" src="https://img.alicdn.com/tps/i4/TB1SOasJVXXXXcWXVXXvKyzTVXX-520-280.jpg" alt="">
+    </div>
+    <div class="box">
+        <img style="width:100%;" src="https://img.alicdn.com/tps/i4/TB1SOasJVXXXXcWXVXXvKyzTVXX-520-280.jpg" alt="">
+    </div>
+</div>
+
+</body>
+</html>
