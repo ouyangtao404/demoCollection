@@ -11,6 +11,7 @@
         position:fixed;
         bottom:10px;
         right:10px;
+        display:none;;
     }
 </style>
 
@@ -29,10 +30,22 @@
 
 <a href="javascript:void(0);" class="toTop">回到顶部</a>
 <script>
-    $('a.toTop').click(function (e) {
+    var btn = $('a.toTop');
+    btn.click(function (e) {
         e.preventDefault();
         $(document.body).animate({scrollTop: 0}, 800);
     });
+
+    $(document).on('scroll', function(e) {
+        var t = $(document).scrollTop();//当前滚动距离
+        var ch = $(window).height();//视窗高度
+        if(t >= ch) {
+            btn.show();
+        } else {
+            btn.hide();
+        }
+    });
+
 </script>
 </body>
 </html>
