@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形金刚-布局-打开</title>
+</head>
+<link rel="stylesheet" href="/_common/common/reset.css"/>
+<link rel="stylesheet" href="/_common/common/common.css"/>
+<style>
+    .p_module_content{
+        background:#ccc;
+    }
+    .leftMenu{
+        background:red;
+    }
+    .module_wrap{
+        background:blue;
+    }
+
+    .p_module_content {
+        width: 980px;
+        margin: 0 auto;
+    }
+    .leftMenu {
+        float: left;
+        width: 188px;
+    }
+    .module_wrap {
+        float: right;
+        width: 770px;
+    }
+</style>
+<body>
+
+    <div class="p_module">
+        <div class="p_module_content clearfix">
+            <div class="leftMenu">
+                leftMenu
+            </div>
+            <div class="module_wrap">
+                module_wrap
+            </div>
+        </div>
+    </div>
+
+<script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+</body>
+</html>

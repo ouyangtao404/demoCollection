@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<head>
+    <meta charset="UTF-8">
+    <title>移动端布局示例</title>
+</head>
+<link rel="stylesheet" href="/_common/common/reset.css"/>
+<link rel="stylesheet" href="/_common/common/common.css"/>
+<link rel="stylesheet" href="/_common/bootstrap/3.3.5/css/bootstrap.css"/>
+<style>
+    .wrap{
+        background:#ccc;
+        padding:20px 0;
+    }
+    .left{
+        float: left;
+        width:200px;
+    }
+    .right{
+        margin-left:200px;
+    }
+    .target:before{
+        content:" ";
+        display:table;
+    }
+</style>
+<body>
+
+<div class="wrap clearfix">
+    <div class="left">
+        <div class="placeholder" style="width:200px;height:50px;background:#00ff00;">placeholder</div>
+    </div>
+    <div class="right">
+        <div class="target">target</div>
+        right
+    </div>
+</div>
+
+<script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+<script src="/_common/bootstrap/3.3.5/js/bootstrap.js"></script>
+
+</body>
+</html>
