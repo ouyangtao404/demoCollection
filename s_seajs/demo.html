@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+    <link rel="stylesheet" href="/_common/common/common.css"/>
+    <script src="/_common/seajs-3.0.0/dist/sea.js"></script>
+</head>
+<body>
+
+test
+
+<script>
+    // seajs 的简单配置
+    seajs.config({
+        base: "/s_seajs/sea-modules/",
+        alias: {
+            "jquery": "/_common/jquery/jquery-1.11.3.js"
+        }
+    });
+
+    // 加载入口模块
+    var mod = seajs.use("mod");
+    console.log(mod);
+</script>
+</body>
+</html>

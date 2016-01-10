@@ -1,0 +1,68 @@
+<!doctype html>
+<body lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<head>
+    <meta charset="UTF-8">
+    <title>浮动学习</title>
+</head>
+<link rel="stylesheet" href="/_common/common/reset.css"/>
+<link rel="stylesheet" href="/_common/common/common.css"/>
+<body>
+<style>
+    body{
+        background:#ccc;
+    }
+
+    .wrap{
+        margin:0 auto;
+        width:1000px;
+        background: #fff;
+        border:1px solid #404040;
+    }
+    .wrap:first-of-type{
+        margin-top:100px auto;
+    }
+    .b,
+    .c{
+        float:left;
+    }
+    .d,
+    .e{
+        clear:right;
+    }
+
+    .over_flow {
+        overflow: auto; zoom: 1;
+    }
+</style>
+<h2>
+
+    <br>针对浮动元素,clear:both == 我要另起一行(但我不能阻止有弟兄追随我)
+    <br>针对给容器加overflow,即触发BFC == 我是个独立的盒子,我安守本分,我的孩子都不会干扰邻居(调皮的浮动孩子,我也会给它生活的空间)
+    <br>
+    <br>容器撑不开,咋办?
+    <br>方法1:需要有不浮动的节点大喊:我要清理浮动!(自身要洁净,不能沾染浮动,否则会破咒!)
+    <br>方法2:父容器有overflow: auto; zoom: 1;(是在处理兼容性问题)
+    <br>方法3:
+</h2>
+<div class="wrap">
+    <div class="a" style="background:red;width:100px;height:100px;">a</div>
+    <div class="b" style="background:#c3ff00;width:220px;height:50px;">b</div>
+    <div class="c" style="background:#6acbff;width:200px;height:200px;">c</div>
+    <div class="d" style="background:#ff98fa;width:80px;height:80px;">d</div>
+    <div class="e" style="background:#ffae8f;width:80px;height:80px;">e</div>
+    <div class="clear" style="background:#dfa8ff;width:80px;height:80px;">clear</div>
+</div>
+<div class="wrap over_flow">
+    <div class="a" style="background:red;width:100px;height:100px;">a</div>
+    <div class="b" style="background:#c3ff00;width:220px;height:50px;">b</div>
+    <div class="c" style="background:#6acbff;width:200px;height:200px;">c</div>
+    <div class="d" style="background:#ff98fa;width:80px;height:80px;">d</div>
+    <div class="e" style="background:#ffae8f;width:80px;height:80px;">e</div>
+</div>
+
+
+<script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+</body>
+</html>
