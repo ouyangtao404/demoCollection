@@ -1037,3 +1037,82 @@ Hit CTRL-C to stop the server
 [Tue, 29 Dec 2015 12:01:26 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
 [Tue, 29 Dec 2015 12:01:26 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
 [Tue, 29 Dec 2015 12:01:26 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css.map[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:35 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:35 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:35 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:35 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:35 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:35 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:38 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:38 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:38 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:38 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:06:38 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:30 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:30 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:30 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:30 GMT] "[36mGET[39m [36m/style/[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/style/display_table_row.html[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/reset.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/common/common.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/css/bootstrap.css[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/jquery/jquery-1.11.3.min.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[Tue, 29 Dec 2015 12:20:36 GMT] "[36mGET[39m [36m/_common/bootstrap/3.3.5/js/bootstrap.js[39m" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.90 Safari/537.36"
+[31mhttp-server stopped.[39m
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[   2976]   WARN - api.vfs.impl.local.FileWatcher - Native file watcher is not executable: <a href="/home/oyt/mysoftware/PhpStorm-143.1184.87/bin/fsnotifier64">/home/oyt/mysoftware/PhpStorm-143.1184.87/bin/fsnotifier64</a> 
+[   9474]   WARN - om.intellij.util.ProfilingUtil - Profiling agent is not enabled. Add -agentlib:yjpagent to idea.vmoptions if necessary to profile IDEA. 
+[  58361]   WARN - ConfigurableExtensionPointUtil - ignore deprecated groupId: editor for id: editor.preferences.import 
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option MaxPermSize=350m; support was removed in 8.0
+log4j:WARN No appenders could be found for logger (io.netty.util.internal.logging.InternalLoggerFactory).
+log4j:WARN Please initialize the log4j system properly.
+log4j:WARN See http://logging.apache.org/log4j/1.2/faq.html#noconfig for more info.
+[   2532]   WARN - api.vfs.impl.local.FileWatcher - Native file watcher is not executable: <a href="/home/oyt/mysoftware/PhpStorm-143.1184.87/bin/fsnotifier64">/home/oyt/mysoftware/PhpStorm-143.1184.87/bin/fsnotifier64</a> 
+[   8422]   WARN - om.intellij.util.ProfilingUtil - Profiling agent is not enabled. Add -agentlib:yjpagent to idea.vmoptions if necessary to profile IDEA. 
+[1936523]   WARN - ConfigurableExtensionPointUtil - ignore deprecated groupId: editor for id: editor.preferences.import 

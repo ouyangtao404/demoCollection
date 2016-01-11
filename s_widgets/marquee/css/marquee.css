@@ -1,0 +1,19 @@
+/*@version 20151022*/
+.wg_marquee {
+  overflow: hidden;
+  position: relative;
+}
+.wg_marquee .twitch_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: top 300ms;
+  -moz-transition: top 300ms;
+}
+.wg_marquee .item {
+  padding-left: 4px;
+  white-space: nowrap;
+  width: 100%;
+  color: #cb1b56;
+  font-size: 16px;
+}

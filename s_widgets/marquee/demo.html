@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+    <link rel="stylesheet" href="./css/marquee.css">
+    <title>跑马灯</title>
+</head>
+<body>
+<style>
+    body{
+        background: #ccc;
+    }
+    .J_custom{
+        background: #fff;
+        height:90px;
+        width:200px;
+        margin:100px auto;
+    }
+</style>
+
+<div class="J_custom">
+
+</div>
+
+<script src="/_common/jquery/jquery-1.11.3.js"></script>
+<script src="./js/marquee.js"></script>
+<script>
+    var mg = new Marquee({
+        container: $('.J_custom'),
+        items:[
+            '1小明：一等奖',
+            '2jack：二等奖',
+            '3成吉思汗：特等奖',
+            '4秦始皇：身体健康~~~~~~~~~~',
+            '5爱因斯坦：再来一次',
+            '6抱鹤：感谢有你'
+        ],
+        width:200,
+        height:30,
+        duration:400,
+        hover: true
+    });
+    mg.init();
+    mg.run();
+</script>
+</body>
+</html>
