@@ -26,7 +26,7 @@ var Marquee = (function() {
         self.param = $.extend({
             width:300,
             height:25,
-            duration:1500,
+            speed:'normal',
             hover: false,
             test: 'test'
         }, o);
@@ -40,6 +40,7 @@ var Marquee = (function() {
 
             self._structure();
             self._bindEvent();
+            return self;
         },
         _structure: function() {
             console.log('structure');
@@ -69,7 +70,8 @@ var Marquee = (function() {
         },
         _bindEvent: function() {
             var self = this;
-            //todo
+            //todo hover
+
         },
         run: function() {
             var self = this;
@@ -84,22 +86,23 @@ var Marquee = (function() {
             var box_height = item_len * param.height;
             var currentIndex = 1;
 
-            self.timer = setInterval(function() {
+            runOneStep();
+            function runOneStep () {
                 var originTop = parseInt(twitch_box.css('top').split('px')[0], 10);
-                twitch_box.css({
-                    top:  originTop - param.height
-                });
-                currentIndex ++;
-                //第二个box的第2个item为当前状态的条件，原因是当执行top变化时，有异步的动画，执行此处的时候滚动有闪动
-                if(currentIndex == item_len + 2) {
-                    changebox();//置换前后box
-                    currentIndex = 2;
-                }
-//                console.log(currentIndex);
-            }, param.duration);
+                twitch_box.animate({top:  originTop - param.height},
+                    param.speed,
+                    function() {
+                        currentIndex ++;
+                        if(currentIndex == item_len + 1) {
+                            changebox();//置换前后box
+                            currentIndex = 1;
+                        }
+                        runOneStep();
+                    }
+                );
+            }
 
             function changebox() {
-//                console.log('change');
                 $(box_front).insertAfter($(box_behind));
                 //加padding-top
                 var oldPaddingTop = parseInt(twitch_box.css('padding-top').split('px')[0], 10);
@@ -108,6 +111,8 @@ var Marquee = (function() {
                 self.box_front = box_behind
                 self.box_behind = box_front;
             }
+
+            return self;
         },
         pause: function() {
             var self = this;

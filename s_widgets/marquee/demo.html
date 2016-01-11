@@ -13,7 +13,8 @@
     body{
         background: #ccc;
     }
-    .J_custom{
+    .J_custom,
+    .J_custom2{
         background: #fff;
         height:90px;
         width:200px;
@@ -24,11 +25,14 @@
 <div class="J_custom">
 
 </div>
+<div class="J_custom2">
+
+</div>
 
 <script src="/_common/jquery/jquery-1.11.3.js"></script>
 <script src="./js/marquee.js"></script>
 <script>
-    var mg = new Marquee({
+    new Marquee({
         container: $('.J_custom'),
         items:[
             '1小明：一等奖',
@@ -40,11 +44,25 @@
         ],
         width:200,
         height:30,
-        duration:400,
+        speed:'fast',
         hover: true
-    });
-    mg.init();
-    mg.run();
+    }).init().run();
+
+    new Marquee({
+        container: $('.J_custom2'),
+        items:[
+            '1小明：一等奖',
+            '2jack：二等奖',
+            '3成吉思汗：特等奖',
+            '4秦始皇：身体健康~~~~~~~~~~',
+            '5爱因斯坦：再来一次',
+            '6抱鹤：感谢有你'
+        ],
+        width:400,
+        height:15,
+        speed:'slow',
+        hover: true
+    }).init().run();
 </script>
 </body>
 </html>
