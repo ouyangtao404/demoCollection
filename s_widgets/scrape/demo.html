@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+    <link rel="stylesheet" href="/_common/common/common.css"/>
+    <title>抽奖-刮一刮</title>
+    <style type="text/css">
+        canvas{
+            -webkit-user-select:none;
+            -moz-user-select:none;
+        }
+        body{
+            background:#fff;
+        }
+        .container{
+            background: #0081ff;
+            width:300px;
+            margin:100px auto 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+</div>
+<p class="tip"></p>
+
+<button class="J_refresh">重置奖区</button>
+<script src="/_common/jquery/jquery-1.11.3.js"></script>
+<script src="scrape.js"></script>
+<script>
+    var lotteryStr = {
+        'a': '骚年，你中了汽车一辆',
+        'b': '好身手，您中了洗衣机一台',
+        'c': '您是用刀片刮的吧，洗衣粉一包',
+        'd': '再来一次'
+    };
+    var str;
+
+    var scrape = new Scrape({
+        container: $('.container'),
+        //底层图片
+        bgImg   : '/_common/materials/beauty.jpg',
+        //涂层图片
+        coatImg : '/_common/materials/coat.jpg',
+        //开始请求抽奖的比例
+        requestCondition: 1,
+        //涂层全开的刮开比例
+        openCondition: 20
+    }).init();
+
+    $(scrape).on('scrape.start', function(e) {
+        $('.tip').html('start');
+        $.ajax({
+            type:'GET',
+            url:'./data/dt.json',
+            dataType:'json',
+            success: function(dt) {
+                var arr = ['a', 'b', 'c', 'd'];
+                var index = Math.floor(Math.random()*arr.length);
+                str = lotteryStr[arr[index]] + dt.result;
+                scrape.showResult(str);
+            }
+        });
+    });
+
+    $(scrape).on('scrape.open', function(e) {
+        $('.tip').html('open');
+        alert(str);
+    });
+
+    $('.J_refresh').on('click', function(e) {
+        $('tip').html('');
+        scrape.refresh();
+    });
+</script>
+</body>
+</html>

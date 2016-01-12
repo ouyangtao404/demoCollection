@@ -16,9 +16,13 @@
         height:30,
         duration:3000,
         hover: true
-    });
- mg.init();
- mg.run();
+    }).init().run();
+
+ 注意点：
+ 1.容器高度不能大于一屏
+ 优化点：
+ 1.支持hover则停止滚动
+
  */
 var Marquee = (function() {
     var Mq = function(o) {
