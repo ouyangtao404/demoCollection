@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浏览器-视觉稿元素</title>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+</head>
+<style>
+    body{
+        background: #fff6a6;
+    }
+    .info_box{
+        min-width:300px;
+        min-height:200px;
+        background: #4f5345;
+        padding:10px;
+        position:fixed;
+        bottom:10px;
+        right:10px;
+        border-radius:10px;
+        color:#404040;
+        opacity:0.8;
+        color:#fff;
+    }
+    .info_box .hd{
+        height:20px;
+        font-size:20px;
+        line-height:30px;
+        color: #d3eeff;
+    }
+    .info_box .box_inner{
+        padding:10px;
+    }
+    .info_box h2{
+        color:red;
+    }
+    .container{
+        width:100px;
+        border:10px solid red;
+        border-radius:10px;
+        padding:10px;
+        background:#ccc;
+        margin:100px auto 0;
+        height:100px;
+        overflow: auto;
+    }
+    .bar{
+        width:30px;
+        background: #aedeff;
+        margin:0 auto;
+    }
+</style>
+<body>
+
+    <div class="info_box">
+        <div class="hd">信息框</div>
+        <div class="box_inner"></div>
+    </div>
+
+    <div class="container">
+        <div class="content">
+            <div class="bar">
+                1<br/>
+                2<br/>
+                3<br/>
+                4<br/>
+                5<br/>
+                1<br/>
+                2<br/>
+                3<br/>
+                4<br/>
+                5<br/>
+                1<br/>
+                2<br/>
+                3<br/>
+                4<br/>
+                5<br/>
+                end<br/>
+            </div>
+        </div>
+    </div>
+    <script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+    <script>
+        var map = {
+            clientHeight: {
+                key: 'clientHeight',
+                des: '可视区域高度'
+            },
+            offsetHeight: {
+                key: 'offsetHeight',
+                des: '实体(偏移)高度'
+            },
+            scrollHeight: {
+                key: 'scrollHeight',
+                des: '内容高度'
+            }
+        };
+        var str = [];
+        str.push('<h2>screen屏幕:</h2>');
+        str.push('屏幕可用高度:window.screen.availHeight=' + window.screen.availHeight);
+        str.push('屏幕总高度:window.screen.height=' + window.screen.height);
+
+        str.push('<h2>浏览器</h2>');
+        str.push('浏览器外边界:window.innerHeight=' + window.innerHeight);
+        str.push('浏览器显示区:window.outerHeight=' + window.outerHeight);
+        showMsg(str.join('<br/>'));
+        showMsgSelector('.container');
+
+        function showMsgSelector(selector) {
+            var node = $(selector)[0];
+            var info = [];
+            info.push('<br/><h2>' + selector + ':</h2>');
+            for(var p in map) {
+                var item = map[p];
+                info.push(item.des + ':' + item.key + '=' + node[item.key]);
+            }
+            var str = info.join('<br/>');
+            showMsg(str);
+        }
+        function showMsg(str) {
+            var showBox = $('.info_box .box_inner');
+            showBox.html(showBox.html() + str);
+        }
+    </script>
+</body>
+</html>

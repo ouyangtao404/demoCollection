@@ -3,17 +3,11 @@ define(function(require, exports, module) {
 
     // 通过 require 引入依赖
     var $ = require('jquery');
-    var Spinning = require('./mod2');
+    var mod2 = require('mod2');
 
     // 通过 exports 对外提供接口
     exports.doSomething = function() {
-        alert('doSomething');
-        Spinning();
+        var number = 1;
+        console.log(number + mod2.doSomething());
     };
-
-    // 或者通过 module.exports 提供整个接口
-    module.exports = function() {
-        alert('export');
-    }
-
 });

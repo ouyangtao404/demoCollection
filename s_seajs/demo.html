@@ -16,13 +16,14 @@ test
     seajs.config({
         base: "/s_seajs/sea-modules/",
         alias: {
-            "jquery": "/_common/jquery/jquery-1.11.3.js"
+            "jquery": "/_common/jqueryCmd/jquery-1.11.3.js"
         }
     });
 
     // 加载入口模块
-    var mod = seajs.use("mod");
-    console.log(mod);
+    var mod = seajs.use("mod", function(mod) {
+        mod.doSomething();
+    });
 </script>
 </body>
 </html>
