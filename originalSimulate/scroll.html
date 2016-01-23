@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+
+    <!--引入css-->
+    <link rel="stylesheet" href="/_common/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.min.css">
+
+    <title>mCustomScrollbar-滚动条模拟</title>
+</head>
+<style>
+    .wrapper{
+        margin:100px auto;
+        text-align:center;
+    }
+    .scrollContainer{
+        width:200px;height:300px;overflow:auto;
+
+        line-height:50px;
+        background: #d2d6e5;
+        display:inline-block;
+        margin-right:10px;
+    }
+    /*定义滚动条样式*/
+    .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar{
+        background: #c4cbe0;
+        /*background: red;*/
+    }
+</style>
+<body>
+
+<div class="wrapper">
+    <div class="scrollContainer container">
+        start<br/>
+        模拟版<br/>
+        a<br/>
+        a<br/>
+        a<br/>
+        a<br/>
+        a<br/>
+        end<br/>
+    </div>
+    <div class="scrollContainer">
+        start<br/>
+        原生版<br/>
+        a<br/>
+        a<br/>
+        a<br/>
+        a<br/>
+        a<br/>
+        end<br/>
+    </div>
+</div>
+
+
+<script src="/_common/jquery/jquery-1.11.3.js"></script>
+<!--<script src="/_common/jquery-ui-1.11.4/jquery-ui.min.js"></script>-->
+<!--<script src="/_common/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.js"></script>-->
+<script src="/_common/malihu-custom-scrollbar-plugin-master/jquery.mCustomScrollbar.concat.min.js"></script>
+<script type='text/javascript'>
+    (function($){
+        $(window).load(function(){
+            $(".container").mCustomScrollbar({
+                theme:"dark-thick"
+            });
+        });
+    })(jQuery);
+</script>
+</body>
+</html>

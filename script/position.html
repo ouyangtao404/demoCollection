@@ -14,7 +14,7 @@
     .parent{
         width:100px;
         height:100px;
-        background:green;
+        background: #00ff00;
         margin:0 0 0 20px;
         padding:20px;
         position:relative;
@@ -34,6 +34,23 @@
         top:0;
         left:0;
     }
+
+    .mark{
+        width:15px;
+        height:24px;
+        background:url(/_common/materials/mark.png) no-repeat 0 0;
+        background-size:100% 100%;
+        position:absolute;
+        top:10px;
+        left:10px;
+    }
+    .con{
+        padding:20px;
+        border:1px solid #ccc;
+        background: #bbff00;
+        max-width:400px;
+        margin:0 auto;
+    }
 </style>
 <body>
 <div class="follow"></div>
@@ -41,7 +58,21 @@
     <div class="son">
         content
     </div>
+    <div class="mark"></div>
 </div>
+
+<div class="con con1">
+    <div class="con con2">
+        <div class="con con3">
+            <div class="con con4">
+                <div class="con con5">
+                    点我
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="/_common/jquery/jquery-1.11.3.min.js"></script>
 <script>
     var tar = $('.son');
@@ -50,6 +81,31 @@
     var offsetParent = tar.offsetParent();
     console.log('%c有定位信息的父元素为：', "font-size:18px;color:red;")
     console.log(offsetParent);
+
+
+    $('body').on('click', function(e) {
+        var tar = $(e.target);
+        var p = tar.offset();
+
+        var pos = {
+            top:  p.top,
+            left:  p.left
+        };
+        console.log(pos);
+        createMark(pos);
+    });
+
+    function createMark(pos) {
+        var markSize = {
+            width: 15,
+            height: 24
+        };
+        pos.left = pos.left - markSize.width/2;
+        pos.top = pos.top - markSize.height;
+        var mark = $('<div class="mark"></div>');
+        $('body').append(mark);
+        mark.css(pos)
+    }
 </script>
 </body>
 </html>

@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>变形金刚-布局-打开</title>
+</head>
+<link rel="stylesheet" href="/_common/common/reset.css"/>
+<link rel="stylesheet" href="/_common/common/common.css"/>
+<style>
+    .p_module_content{
+        background:#ccc;
+    }
+    .leftMenu{
+        background:red;
+    }
+    .module_wrap{
+        background:blue;
+    }
+
+    .p_module_content{
+        width:98%;
+        margin:0 auto;
+        min-width:980px;
+    }
+    .module_wrap{
+        margin-left:200px;
+    }
+    .leftMenu{
+        width:200px;
+        float:left;
+    }
+
+
+    /*窄版本*/
+    .p_module_content.p_module_content_narrow{
+        width: 980px;
+        margin: 0 auto;
+    }
+    .p_module_content_narrow .leftMenu {
+        float: left;
+        width: 188px;
+    }
+    .p_module_content_narrow .module_wrap {
+        float: right;
+        width: 770px;
+        margin:0;
+    }
+</style>
+<body>
+
+<h2>宽版本</h2>
+    <div class="p_module">
+        <div class="p_module_content clearfix">
+            <div class="leftMenu">
+                leftMenu
+            </div>
+            <div class="module_wrap">
+                module_wrap
+            </div>
+        </div>
+    </div>
+
+<h2>窄版本</h2>
+    <div class="p_module">
+        <div class="p_module_content p_module_content_narrow clearfix">
+            <div class="leftMenu">
+                leftMenu
+            </div>
+            <div class="module_wrap">
+                module_wrap
+            </div>
+        </div>
+    </div>
+
+<script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+</body>
+</html>
