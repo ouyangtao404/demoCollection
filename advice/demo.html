@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>留言</title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <script src="/_common/zepto/zepto.js"></script>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+    <link rel="stylesheet" href="/_common/common/common.css"/>
+
+    <link rel="stylesheet" href="assets/alert.css?t=7">
+    <script src="assets/alert.js?t=2"></script>
+
+</head>
+<style>
+    body{
+        background:#fcf3e2;
+    }
+    .container{
+        /*width:600px;*/
+        margin:20px auto;
+        font-size:14px;
+        background:#fff;
+    }
+</style>
+<link rel="stylesheet" href="assets/def.css"/>
+
+<body>
+<div class="container">
+
+    <div class="advice" data-topicId="appstore_20160321" data-textLimit="140">
+        <h2 class="hd">留言板</h2>
+        <div class="advice-box">
+            <textarea class="J_val" placeholder="请在这里发表留言"></textarea>
+        </div>
+        <div class="verify clearfix">
+            <input class="J_code" type="text" placeholder="输入验证码"/>
+            <img class="verifyCodeImg" src="http://appdev.yunos.com/checkCode.htm" alt="点击更换"/>
+        </div>
+        <p class="btn-box">
+            <button class="J_sbt">提交</button>
+        </p>
+    </div>
+
+</div>
+<script src="assets/def.js?t=5"></script>
+<script src="http://10.32.182.129:8089/target/target-script-min.js#anonymous"></script>
+
+</body>
+</html>

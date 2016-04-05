@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+    <link rel="stylesheet" href="/_common/common/common.css"/>
+    <link rel="stylesheet" href="./css/def.css">
+    <title>翻牌</title>
+</head>
+<body>
+<style>
+
+    .lottery_box {
+        background: #fff;
+        height: 400px;
+    }
+    .lottery_box .card_list {
+        width: 306px;
+    }
+    .lottery_box .card {
+        width: 100px;
+        height: 130px;
+        float: left;
+        color: #404040;
+    }
+    .lottery_box .card_inner {
+        width: 98px;
+        height: 128px;
+        border: 1px solid red;
+        background: #d9a07a;
+        text-align: center;
+        line-height: 100px;
+    }
+    .lottery_box .btn {
+        width: 100px;
+        height: 100px;
+        background: #4a57ff;
+        border-radius: 50px;
+        display: block;
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    .lottery_box .btn_box {
+        background: #fff;
+    }
+</style>
+
+    <div class="lottery_box">
+        <div class="card_list clearfix">
+            <div class="card card0">
+                <div class="card_inner">
+                    背包0
+                </div>
+            </div>
+            <div class="card card1">
+                <div class="card_inner">
+                    相机1
+                </div>
+            </div>
+            <div class="card card2">
+                <div class="card_inner">
+                    苹果2
+                </div>
+            </div>
+            <div class="card card7">
+                <div class="card_inner">
+                    笔记本7
+                </div>
+            </div>
+            <div class="card btn_box">
+                <a class="btn" href="javascript:void(0);">start</a>
+            </div>
+            <div class="card card3">
+                <div class="card_inner">
+                    鼠标3
+                </div>
+            </div>
+            <div class="card card6">
+                <div class="card_inner">
+                    投影仪6
+                </div>
+            </div>
+            <div class="card card5">
+                <div class="card_inner">
+                    望远镜5
+                </div>
+            </div>
+            <div class="card card4">
+                <div class="card_inner">
+                    帐篷4
+                </div>
+            </div>
+        </div>
+
+        <div class="board" style="background:#ccc;border:1px solid black;padding:10px;margin-top:20px;">
+            <input class="target" type="text" readonly value="0"/>
+            <br>
+            <a class="J_tab" data-index="0" href="javascript:void(0)">背包０</a>
+            <a class="J_tab" data-index="1" href="javascript:void(0)">相机１</a>
+            <a class="J_tab" data-index="2" href="javascript:void(0)">苹果２</a>
+            <a class="J_tab" data-index="3" href="javascript:void(0)">鼠标３</a>
+            <a class="J_tab" data-index="4" href="javascript:void(0)">帐篷４</a>
+            <a class="J_tab" data-index="5" href="javascript:void(0)">望远镜５</a>
+            <a class="J_tab" data-index="6" href="javascript:void(0)">投影仪６</a>
+            <a class="J_tab" data-index="7" href="javascript:void(0)">笔记本７</a>
+        </div>
+        <script>
+            setTimeout(function() {
+                $('.J_tab').on('click', function(e) {
+                    var tar = $(e.target);
+                    var index = tar.attr('data-index');
+                    $('.target').val(index);
+                });
+            }, 1000)
+        </script>
+    </div>
+
+<script src="/_common/jquery/jquery-1.11.3.js"></script>
+<script src="./js/cardlottery.js"></script>
+<script>
+    var container = $('.lottery_box');
+    var cardList = getCardList();
+    var result;
+    var cardlottery = new Cardlottery({
+        container   : container,
+        cardList    : cardList,
+        startBtn    : $('.btn', container),
+        onStart     : lotteryStart,
+        onComplete  : function() {
+            console.log('中奖结果为：'+ result);
+        }
+    }).init();
+
+    function lotteryStart() {
+        console.log('%c start', 'color:red;');
+        setTimeout(function() {
+            var index = parseInt($('.target').val(), 10);
+            result = index;
+            console.log('go('+ index +')');
+            cardlottery.go(index);//笔记本
+        }, 2000);
+    }
+    function getCardList() {
+        var rst = [];
+        var sum = 8;
+        for(var i = 0; i < sum; i ++) {
+            var index = i;
+            rst.push($('.card'+ index, container));
+        }
+        return rst;
+    }
+</script>
+</body>
+</html>

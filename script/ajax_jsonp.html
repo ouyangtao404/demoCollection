@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jsonp</title>
+</head>
+<body>
+<script src="/_common/jquery/jquery-1.11.3.js"></script>
+<button class="J_jsonp">jsonp</button>
+
+<script>
+
+    $('.J_jsonp').on('click', function(e) {
+        $.ajax({
+            url: './data/dt.json',
+            method: 'GET',
+            success: function(dt) {
+                console.log(dt);
+            },
+            dataType: 'jsonp'
+        });
+    });
+
+
+</script>
+</body>
+</html>

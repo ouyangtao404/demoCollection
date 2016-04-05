@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>h5模块-样式生成器</title>
+    <link rel="shortcut icon" href="http://m.alicdn.com/home-node/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="http://m.alicdn.com/transformer/wd/publish/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <style>
+        .con{
+            background:url('https://gw.alicdn.com/tps/TB1SzD9LFXXXXbiaXXXXXXXXXXX-50-50.gif') repeat 0 0;
+        }
+        .one{
+            padding-bottom:5px;
+            min-height:40px;
+        }
+        .show_box{
+            width:400px;
+            height:100px;
+            font-size:12px;
+            line-height:12px;
+            text-align:center;
+            margin:0 auto 10px;
+            background:#fff;
+            border:10px solid rgb(230, 230, 230);
+            overflow:hidden;
+        }
+        .set_box label{
+            min-width:100px;
+            margin-right:20px;
+        }
+        .set_box .value_one{
+            display: inline-block;
+            visibility: hidden
+        }
+        .set_box .value_one input{
+            width:200px;
+            display:inline-block;
+            margin-right:5px;
+        }
+        .code_box textarea{
+            width:100%;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>样式生成器</h1>
+            <p>应用场景：tms平台，模块搭建页面，需要对模块内容进行更多的样式控制。</p>
+            <p>使用方式：请使用chrome浏览器，配置样式，将生成代码粘贴到元素的“样式坑位”。</p>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">文本样式</h3>
+            </div>
+            <div class="panel-body con">
+
+                <div class="show_box">
+                    <span class="J_show">我是示例文本，<br/>我是示例文本。</span>
+                </div>
+                <div class="set_box alert alert-info">
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体大小
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="14" data-style="font-size" data-unit="px"/>px
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体颜色
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="#FF8888" data-style="color"/>
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体加粗
+                        </label>
+                        <div class="value_one" data-hide="true">
+                            <input class="form-control" type="text" value="bold" data-style="font-weight"/>
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体行高
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="20" data-style="line-height" data-unit="px"/>px
+                        </div>
+                    </div>
+                </div>
+                <div class="code_box">
+                    <textarea class="J_code" onclick="this.select();" placeholder="此处复制代码"></textarea>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">
+                <h3 class="panel-title">块级样式</h3>
+            </div>
+            <div class="panel-body con">
+                <div class="show_box">
+                    <div class="J_show">我是示例文本，我是示例文本。</div>
+                </div>
+                <div class="set_box alert alert-info">
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体大小
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="14" data-style="font-size" data-unit="px"/>px
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体颜色
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="#FF8888" data-style="color"/>
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体加粗
+                        </label>
+                        <div class="value_one" data-hide="true">
+                            <input class="form-control" type="text" value="bold" data-style="font-weight"/>
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>字体行高
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="20" data-style="line-height" data-unit="px"/>px
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>宽度
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="100" data-style="width" data-unit="px"/>px
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>高度
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="20" data-style="height" data-unit="px"/>px
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>边框
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="1px solid red" data-style="border" data-unit=""/>
+                        </div>
+                    </div>
+                    <div class="one">
+                        <label>
+                            <input type="checkbox"/>背景色
+                        </label>
+                        <div class="value_one">
+                            <input class="form-control" type="text" value="#69C0EA" data-style="background-color" data-unit=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="code_box">
+                    <textarea class="J_code" onclick="this.select();" placeholder="此处复制代码"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script src="http://m.alicdn.com/transformer/wd/publish/??
+jquery.min.js,
+bootstrap/3.3.5/js/bootstrap.min.js" charset="utf-8"></script>
+    <script>
+        $('.con').each(function(i, item) {
+            var con = $(item);
+            var checkboxs = $('input[type=checkbox]', con);
+            checkboxs.on('change', function(e) {
+                var tar = $(e.currentTarget);
+                setStatus(tar, con);
+                setStyle();
+            });
+            $('.value_one input', con).on('change', function(e) {
+                setStyle();
+            });
+
+            function setStatus(tar) {
+                var one = tar.parents('.one');
+                var value_one = $('.value_one', one);
+                if(value_one.attr('data-hide') == 'true') {return}
+                if(tar.prop('checked')) {
+                    value_one.css({
+                        'visibility': 'visible'
+                    });
+                } else {
+                    value_one.css({
+                        'visibility': 'hidden'
+                    });
+                }
+            }
+            function setStyle() {
+                //效果
+                var styleStr = '';
+                $('.value_one input', con).each(function(i, item) {
+                    //过滤
+                    var one = $(item);
+                    var isSelected = one.parents('.one').find('input[type=checkbox]').prop('checked');
+                    if(!isSelected) {return;}
+                    styleStr += one.attr('data-style')
+                            + ':'
+                            + (one.val() ? one.val() : '')
+                            + (one.attr('data-unit') ? one.attr('data-unit') : '')
+                            + ';';
+                });
+                //代码
+                $('.J_show', con).attr('style', styleStr);
+                $('.J_code', con).val(styleStr);
+            }
+        });
+    </script>
+</body>
+</html>

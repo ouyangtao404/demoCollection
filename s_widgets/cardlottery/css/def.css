@@ -1,0 +1,21 @@
+.w_cardlottery{
+
+}
+.w_cardlottery .btn.loading{
+    color: #63655e;
+    cursor:wait;
+}
+.w_cardlottery .active{
+    width:100%;
+    height:100%;
+}
+.w_cardlottery .card_inner{
+    width:100px;
+    height:130px;
+}
+.w_cardlottery .active .card_inner{
+    zoom:1.1;
+    position:relative;
+    left:-5%;
+    top:-5%;
+}
