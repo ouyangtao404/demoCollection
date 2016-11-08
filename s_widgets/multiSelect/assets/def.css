@@ -1,0 +1,27 @@
+.wd-multiSelect{
+    border:1px solid #ccc;
+    font-size:12px;
+    display:inline-block;
+}
+.wd-multiSelect .basic-box{
+    position: relative;
+}
+.wd-multiSelect .list{
+    overflow:hidden;
+}
+.wd-multiSelect .edit-box{
+    position:absolute;
+    width:100%;
+    top:0;
+    left:0;
+    background:#ccc;
+    overflow:hidden;
+    display:none;
+}
+.wd-multiSelect .btn-box{
+    text-align:right;
+}
+.wd-multiSelect .list .item{
+    float:left;
+    margin:3px;
+}

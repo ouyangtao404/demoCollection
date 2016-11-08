@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>webview优化测试页</title>
+    <link rel="shortcut icon" href="//m.alicdn.com/home-node/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+</head>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .all-container{
+        padding:10px;
+    }
+</style>
+<link rel="stylesheet" href="//m.alicdn.com/transformer/wd/publish/bootstrap/3.3.5/css/bootstrap.min.css"/>
+<script src="//m.alicdn.com/transformer/wd/publish/??
+jquery.min.js,
+bootstrap/3.3.5/js/bootstrap.min.js," charset="utf-8"></script>
+
+<body>
+
+<div class="all-container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">1.浏览器userAgent</div>
+        </div>
+        <div class="panel-body">
+            <p class="bg-info">观察如下内容，要求有应用版本</p>
+            <div class="J_userAgent"></div>
+        </div>
+        <script>
+            $('.J_userAgent').html(navigator.userAgent);
+        </script>
+    </div>
+
+    <!--<div class="panel panel-primary">-->
+        <!--<div class="panel-heading">-->
+            <!--<div class="panel-title">2.js支持，js运行超时限制？</div>-->
+        <!--</div>-->
+        <!--<div class="panel-body">-->
+            <!--暂不验证（如死循环的停止提示）-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">3.开启console的支持，方便调试。</div>
+        </div>
+        <div class="panel-body">
+            <p class="bg-info">在非user版本手机关联的命令行里看</p>
+            <button type="button" class="btn btn-info" onclick="javascript:console.log('console.log打印文案');">console</button>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">4.页面cache\localStorage cache\app cache可用性</div>
+        </div>
+        <div class="panel-body">
+            //todo
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">5.保证某些预定义或自定义协议的有效性（mailto: tel: data:）</div>
+        </div>
+        <div class="panel-body">
+            //todo 测试方式待确认
+            <a href="mailto:123">mailto:123</a>
+            <a href="tel:123">tel:123</a>
+            <a href="data:123">data:123</a>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">6.超链接target的属性正常工作（target="_blank|_self|_parent|_top"）</div>
+        </div>
+        <div class="panel-body">
+            <p class="bg-info">3种方式，跳转到baidu</p>
+            <a class="btn btn-link" href="http://www.baidu.com/" target="_blank">_blank</a>
+            <a class="btn btn-link" href="http://www.baidu.com/" target="_self">_self(默认)</a>
+            <a class="btn btn-link" href="http://www.baidu.com/" target="_parent">_parent</a>
+            <a class="btn btn-link" href="http://www.baidu.com/" target="_top">_top</a>
+        </div>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">7.页面前进后退可用性</div>
+        </div>
+        <div class="panel-body">
+
+            <a class="btn btn-link" href="#step1">#step1</a>
+            <a class="btn btn-link" href="#step2">#step2</a>
+            <br/>
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default J_backward">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    后退
+                </button>
+                <button type="button" class="btn btn-default J_forward">
+                    前进
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </button>
+            </div>
+        </div>
+        <script>
+            (function() {
+                $('.J_backward').on('click', function() {
+                    history.go(-1);
+                });
+                $('.J_forward').on('click', function() {
+                    history.go(1);
+                });
+            }) ();
+        </script>
+    </div>
+
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">8.重载alert,confirm,prompt对话框</div>
+        </div>
+        <div class="panel-body">
+            <button type="button" class="btn btn-info" onclick="javascript:alert('提示文案');">alert</button>
+            <button type="button" class="btn btn-info" onclick="javascript:var r = confirm('确认文案');alert(r);">confirm</button>
+            <button type="button" class="btn btn-info" onclick="javascript:var r = prompt('输入框文案');alert(r);">prompt</button>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">9.重载点击select元素弹出的对话框</div>
+        </div>
+        <div class="panel-body">
+            <select name="test">
+                <option value="0">0</option>
+                <option value="0">我是文案</option>
+                <option value="2">我是很长的测试文案我是很长的测试文案我是很长的测试文案</option>
+            </select>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">10.重载文件选择对话框</div>
+        </div>
+        <div class="panel-body">
+            <input type="file" name="fileIpt">
+            文件上传
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">11.保证geolocation权限确认对话框的可用性。</div>
+        </div>
+        <div class="panel-body">
+            <p class="bg-info">期望效果：弹出窗口请求用户授权，以提取定位信息</p>
+            //todo 测试效果
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">12.开启文件下载功能支持。</div>
+        </div>
+        <div class="panel-body">
+            <a class="btn btn-link" href="http://ossfile.yunos.com/pub/2016-3/031f1f16-cd18-4835-aedc-2af8b6bd8309.apk">点击下载某个apk</a>
+            //todo 再来一个zip文件@渡难
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">13.给Js扩展私有API</div>
+        </div>
+        <div class="panel-body">
+            移步到:
+            <a class="btn btn-link" href="http://act.yun.taobao.com/market/yunos/test/forlinao.php">另一个测试demo</a>
+        </div>
+    </div>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">14.\15.\16.应用层面内容</div>
+        </div>
+        <div class="panel-body">
+            14.webview和activity行为相关联时，需要处理好onPause,onResume事件，让web
+            有停止和恢复定时器、UI、历史记录等状态的机会。
+            <br>
+            15.给应用一个清理webview中web缓存的入口（期望有移动端浏览器一样的清楚缓存的入口）
+            <br>
+            16.页面加载进度提示条，不限制具体如何实现
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">17.输入法遮盖输入框</div>
+        </div>
+        <div class="panel-body">
+            <p class="bg-info">点击如下输入框，观察输入法和输入框的位置</p>
+            <input type="text"/>
+        </div>
+    </div>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <div class="panel-title">18.页面高度为0</div>
+        </div>
+        <div class="panel-body">
+            期望有移动端浏览器一样的清楚缓存的入口
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

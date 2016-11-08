@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TMS图文链</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+
+</head>
+<link rel="stylesheet" href="/_common/common/reset.css"/>
+<link rel="stylesheet" href="/_common/common/common.css"/>
+<style>
+    body{
+        background:#00ff00;
+    }
+
+    /*模块*/
+    .con{
+        font-size:0;
+        white-space:nowrap;
+    }
+    .con .gap{
+        display:inline-block;
+        width:0;
+    }
+    .con .gap:first-of-type{
+        display:none;
+    }
+    .item{
+        width:25%;
+        display:inline-block;
+    }
+    .item img{
+        width:100%;
+    }
+</style>
+<body>
+
+<div class="module">
+    <div class="con hasGap" data-grapWidth="10" style="padding:0 40px;">
+        <div class="gap"></div>
+        <a class="item" href="#">
+            <img src="https://img.alicdn.com/tfs/TB1brDoKXXXXXcbXVXXXXXXXXXX-520-280.jpg" alt="">
+        </a>
+        <div class="gap"></div>
+        <a class="item" href="#">
+            <img src="https://img.alicdn.com/tfs/TB1brDoKXXXXXcbXVXXXXXXXXXX-520-280.jpg" alt="">
+        </a>
+        <div class="gap"></div>
+        <a class="item" href="#">
+            <img src="https://aecpm.alicdn.com/simba/img/TB1Lyb8LVXXXXbcXpXXSutbFXXX.jpg" alt="">
+        </a>
+        <div class="gap"></div>
+        <a class="item" href="#">
+            <img src="https://img.alicdn.com/tfs/TB1brDoKXXXXXcbXVXXXXXXXXXX-520-280.jpg" alt="">
+        </a>
+    </div>
+</div>
+
+<script src="/_common/jquery/jquery-1.11.3.min.js"></script>
+<script>
+    (function() {
+        $('.con').each(function(i, item) {
+            deal(item);
+        });
+
+        function deal(con) {
+            var con = $(con);
+            setSize(con);
+            $(window).resize(function() {
+                setSize(con);
+            });
+        }
+
+        function setSize(con) {
+            var con = $(con);
+            var gapWidth = parseInt(con.attr('data-grapWidth'));
+            var conWidth = con.width();
+            var itemNum = con.find('.item').length;
+            con.find('.gap').width(gapWidth);
+            var itemWidth = (conWidth - (gapWidth * (itemNum - 1))) / itemNum;
+            con.find('.item').width(itemWidth);
+        }
+    }) ();
+</script>
+</body>
+</html>

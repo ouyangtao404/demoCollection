@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <title>webview调试入口页</title>
+    <link rel="shortcut icon" href="//m.alicdn.com/home-node/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+</head>
+
+<style>
+    *{
+        margin:0;
+        padding:0;
+    }
+    .all-container{
+        padding:10px;
+    }
+    .btn-box{
+        padding:10px 0 20px 0;
+    }
+    .btn-box button{
+        margin-top:5px;
+    }
+    .list{
+        padding-top:20px;
+    }
+
+</style>
+<link rel="stylesheet" href="//m.alicdn.com/transformer/wd/publish/bootstrap/3.3.5/css/bootstrap.min.css"/>
+<script src="//m.alicdn.com/transformer/wd/publish/??
+jquery.min.js,
+bootstrap/3.3.5/js/bootstrap.min.js," charset="utf-8"></script>
+
+<body>
+<div class="all-container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">h5调试入口(webview)</div>
+        <div class="panel-body">
+            <div class="btn-box">
+                <button type="button" class="btn btn-info J_prev">上一个</button>
+                <button type="button" class="btn btn-info J_next">下一个</button>
+                <button type="button" class="btn btn-info J_add_content" data-str="http://">http://</button>
+                <button type="button" class="btn btn-info J_add_content" data-str="https://">https://</button>
+                <button type="button" class="btn btn-info J_add_content" data-str="www.">www.</button>
+                <button type="button" class="btn btn-info J_add_content" data-str=".com">.com</button>
+                <button type="button" class="btn btn-info J_refresh">刷新本页</button>
+                <button type="button" class="btn btn-danger J_clear">清空输入框</button>
+            </div>
+            <div class="form-group">
+                <input class="form-control J_url" placeholder="请输入url"/>
+            </div>
+            <button type="button" class="btn btn-success J_go">跳转</button>
+
+            <div class="list">
+                <table class="table table-striped">
+                    <tr>
+                        <td>
+                            <a href="http://appdev.yunos.com/">http://appdev.yunos.com/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://appdev.yunos.com/">http://appdev.yunos.com/</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="http://appdev.yunos.com/">http://appdev.yunos.com/</a>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    //@todo　缓存相关
+    $(function() {
+        var ipt = $('.J_url');
+        var btn = $('.J_go');
+        btn.on('click', function(e) {
+            var url = ipt.val().trim();
+            if(url != '') {
+                btn.html(btn.html() + 'ing');
+                window.location.href = url;
+            }
+        });
+        $('.J_clear').on('click', function(e) {
+            ipt.val('');
+        });
+        $('.J_add_content').on('click', function(e) {
+            var str = $(e.target).attr('data-str');
+            ipt.val(ipt.val() + str);
+            ipt.focus();
+        });
+        $('.J_refresh').on('click', function(e) {
+            var href = window.location.href;
+            window.location.href = href.split('?')[0] + '?t=' + (new Date() - 0);
+        });
+    });
+</script>
+</body>
+</html>

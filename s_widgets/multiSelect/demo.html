@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="/_common/common/reset.css"/>
+    <link rel="stylesheet" href="/_common/common/common.css"/>
+    <link rel="stylesheet" href="./assets/def.css"/>
+    <script src="/_common/jquery/jquery-1.11.3.js"></script>
+    <script src="./assets/def.js?t=5"></script>
+</head>
+<style>
+    .container{
+        /*height:50px;*/
+        margin:0 auto;
+        background:#ccc;
+    }
+</style>
+<body>
+
+<div class="container">test</div>
+
+<script>
+    (function() {
+        new MultiSelect({
+            data : [
+                {
+                    "display" : "选1",
+                    "value"   : "值1"
+                }, {
+                    "display" : "选2",
+                    "value"   : "值2"
+                }, {
+                    "display" : "选3",
+                    "value"   : "值3"
+                }, {
+                    "display" : "选4",
+                    "value"   : "值4"
+                }, {
+                    "display" : "选5",
+                    "value"   : "值5"
+                }, {
+                    "display" : "选6",
+                    "value"   : "值6"
+                }, {
+                    "display" : "选7",
+                    "value"   : "值7"
+                }
+            ],
+            name         :'name_test',
+            selected     :['值1', '值2', '值3'],
+            container    :$('.container')
+        });
+    })();
+
+//    onUpdate    : function(selectCon) {
+//        console.log('如下select有更新');
+//        console.log(selectCon);
+//    }
+</script>
+</body>
+</html>

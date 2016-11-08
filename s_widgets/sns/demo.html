@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>淘宝sdk-sns(半成品)</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no"/>
+    <script src="//assets.alicdn.com/s/kissy/1.2.0/kissy-min.js"></script>
+    <script src="//assets.alicdn.com/p/snsdk/core.js"></script>
+
+</head>
+<body>
+
+<div id="sns-demo-panel4"></div>
+<script type="text/javascript">
+    SNS.ui("comment",
+            {
+                "element":"#sns-demo-panel4",//组件要插入的dom
+                "isAutoHeight":false,
+                "param":{
+                    "target_key":"123456",//业务主键
+                    "type_id":"1100035",//应用标示
+                    "rec_user_id":"123456789",//被评论主体的拥有者
+                    "view":"detail_list",
+                    "title":"这是一条来自淘宝网的评论",//上下文说明
+                    "moreurl":"http: //www.taobao.com",//业务详情页地址
+                    "canFwd":"0"//不要转发功能
+                },
+                "paramList":{
+                    "view":"list_trunPage"
+                },
+                "callback":{
+                    "addCallback":function(){//发表评论回调，不管成功与否都回调
+                        alert("你成功的发表了一条评论！");
+                    },
+                    "delCallback":function(){},//删除评论回调
+
+                    "initCmtCallback":function(){},//初始化完回调
+
+                    "commentCallback":function(){}//发表成功回调
+                }
+            });
+</script>
+
+</body>
+</html>

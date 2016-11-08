@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="zh_cn">
+<head><title>部落冲突:皇室战争游戏资讯</title>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <link rel="stylesheet" href="http://m.alicdn.com/gamecenterv3/news.css" type="text/css">
+    <script src="http://m.alicdn.com/library/zepto/zepto.min.js"></script>
+</head>
+<body>
+<script>    function init(fun) {
+    function connectWebViewJavascriptBridge(callback) {
+        if (window.WebViewJavascriptBridge) {
+            callback(WebViewJavascriptBridge);
+        } else {
+            document.addEventListener('WebViewJavascriptBridgeReady', function () {
+                callback(WebViewJavascriptBridge);
+            }, false);
+        }
+    }
+
+    connectWebViewJavascriptBridge(function (bridge) {
+        bridge.init(function (message, responseCallback) {
+            var data = {'Javascript Responds': 'Wee!'};
+            responseCallback(data);
+        });
+        bridge.registerHandler("functionInJs", function (data, responseCallback) {
+            document.getElementById("show").innerHTML = ("data from Java: = " + data);
+            var responseData = "Javascript Says Right back aka!";
+            responseCallback(responseData);
+        });
+    });
+    WebViewJavascriptBridgeReady(function () {
+        fun();
+    });
+    function WebViewJavascriptBridgeReady(callback) {
+        var count = 0;
+        var timer = setInterval(function () {
+            console.log('intervaling...');
+            if (window.WebViewJavascriptBridge) {
+                callback && callback();
+                clearInterval(timer);
+            }
+        }, 50);
+    }
+}
+function handleLinkTag() {
+    var items = document.getElementsByTagName('a');
+    for (var i = 0, len = items.length; i < len; i++) {
+        items[i].style.color = '#333';
+        items[i].onclick = function () {
+            return false;
+        }
+    }
+}
+function cons(text) {
+    document.getElementById('cons').innerHTML = text;
+}
+function handleRealteNews() {
+    try {
+        Zepto.ajax({
+            url: "http://game.yunos.com/vip/news/relates?id=821532&callback=?", success: function (json) {
+                try {
+                    if (json && json['success'] && Zepto.isArray(json['datas']) && json['datas'].length > 0) {
+                        var items = '';
+                        $.each(json['datas'], function (i, d) {
+                            items += '<li class="item"> ' + '<a href="' + d.url + '">' + '<span class="tag" style="background:' + d.cat.color + ';">' + d.cat.text + '</span> ' + '<span class="info-title">' + d.title + '</span>' + '</a>' + '</li>';
+                        });
+                        $('.info').append('<h2 class="title">相关资讯</h2><ul class="list">' + items + '</ul>');
+                    }
+                } catch (e) {
+                }
+            }
+        });
+    } catch (e) {
+    }
+}
+Zepto(function ($) {
+    handleLinkTag();
+    handleRealteNews();
+});</script>
+<div class="container">
+    <div class="content">
+        <div id="cons"></div>
+        <h1 class="title">《皇室战争》论狂暴樵夫的正确打开姿势</h1>
+        <p class="txt"></p>
+        <p>本文由<span>九游</span>论坛玩家<span>叶灬落知秋</span>原创，转载请注明出处。欢迎<span>点击进入原帖</span>与作者互动交流~ 如你也有优质内容分享，可在论坛发帖投稿~</p>
+        &nbsp; &nbsp;&nbsp; &nbsp; <br> &nbsp; &nbsp;&nbsp; &nbsp; <font face="Helvetica"><font size="4"><font
+            color="#0000ff"><strong>皇室战争更新后，狂暴樵夫这个传奇<span>卡牌</span>，许多主播都觉得他比较好用，而且很牛逼，是好多土豪代替原来卡组里的狂暴法术的牛逼卡。</strong></font></font></font>
+        <br> <br>
+        <div align="center"><p><span class="yunos-gc-video" id="yunos-gc-video" style="width:328px;height:180px;"><a><i
+                class="cover"></i><img src="http://image.game.uc.cn/2016/7/7/13715981.png"></a></span>
+            <div>
+                <script type="application/javascript">                        (function () {
+                    var video = document.getElementById('yunos-gc-video');
+                    var url = encodeURIComponent("http://v.youku.com/v_show/id_XMTYyOTcyODM5Ng==.html");
+
+                    function play() {
+                        Zepto.ajax({
+                            url: "http://game.yunos.com/vip/vps?url=" + url + "&callback=?",
+                            success: function (json) {
+                                init(function () {
+                                    if (json && json['success']) {
+                                        window.WebViewJavascriptBridge.callHandler('play_video', json['data']['mp4']);
+                                    }
+                                });
+                            }
+                        });
+                    }
+
+                    video.onclick = play;
+                    var q = window.location.search.substring(1);
+                    if (q) {
+                        var vars = q.split('&');
+                        for (var i = 0; i < vars.length; i++) {
+                            var pair = vars[i].split('=');
+                            if ('autoPlay' == pair[0] && 'true' == pair[1]) {
+                                play();
+                                break;
+                            }
+                        }
+                    }
+                })();                </script>
+            </div>
+            </p>     </div>
+        <br> <br> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <font face="Helvetica"><font size="4"><strong><font
+            color="#0000ff">通过上述的视频，大家可以看到因为移速的原因，狂暴樵夫和大部分传统的狂暴流都不太搭，比如</font><font color="#ff0000">胖子，气球，天狗，黄家驹，猪，石头人，火枪，大皮卡以及新卡投石巨人</font><font
+            color="#0000ff">。意思就是对方在河道放下防御塔拉扯，狂暴樵夫直奔塔下而去，死亡后狂暴范围[很可能覆盖不了]，相对于狂暴法术，狂暴樵夫的buff范围是原来的半圆多一点。</font></strong></font></font>
+        <br> <br>
+        <div align="center"><img alt="t01cfd8d1c29c0048a9.jpg"
+                                 src="http://dl.bbs.9game.cn/attachments/forum/201607/06/175702gkrewfgtbf2bandb.jpg"
+                                 title="t01cfd8d1c29c0048a9.jpg" class="full"></div>
+        <br> <br> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; <strong><font face="Helvetica"><font size="4"><font
+            color="#0000ff">所以最好配合的不再是原来的以塔为目标的高费单位，而是近战单位和快速<span>移动</span>的小单位，而且要让樵夫吸引火力。但是鉴于小单位现在太容易被</font></font></font><font
+            face="Helvetica"><font size="4"><font color="#ff0000">法术、冰法、公主解</font></font></font><font
+            face="Helvetica"><font size="4"><font
+            color="#0000ff">，即使有buff也没单位输出，所以最优的选择，个人认为是皮厚有进攻性的</font></font></font><font face="Helvetica"><font
+            size="4"><font color="#ff0000">骑士，黑骑，皮卡，矿工</font></font></font><font face="Helvetica"><font size="4"><font
+            color="#0000ff">。当然，也可以在前置樵夫后下骑士黑骑皮卡带低速单位开车，这个和以前用过的很多套路一样，区别在于樵夫替代了原来的一张卡。低费群体单位里有个特殊的存在骷髅守卫，盾基本能吃同级群伤单位2次攻击或者任意法术一次。</font></font></font></strong>
+        <br> <br> <strong><font face="Helvetica"><font size="4"><font color="#0000ff">　　现在土豪主播们都在第一时间拥有了樵夫，不过都在感叹：樵夫真的很难配。满地的假<span>卡组</span>乱走之后要么用回旧卡组，要么就是强行锦标赛中段位不弱。各种狂暴意外死亡，浪费狂暴。</font></font></font></strong>
+        <br> <br> <strong><font face="Helvetica"><font size="4"><font color="#0000ff">　　</font></font></font><font
+            face="Helvetica"><font size="4"><font color="#ff0000">真的只能是快移速单位跟樵夫抱团推进，可以带1-3费单位进攻：小骷髅，骷髅守卫，哥布林，长矛哥布林，女弓，苍蝇，冰火精灵，冰法，个人觉得骷髅守卫，女弓，苍蝇，冰精灵，冰法更优，不会被小闪打掉进而进攻。</font></font></font></strong>
+        <br> <br> <strong><font face="Helvetica"><font size="4"><font color="#ff0000">　　现在想到的卡组是：王子，樵夫，冰法，苍蝇，采集器，小闪(冰精灵)，火球(毒)，土炮。</font></font></font></strong>
+        <br> <strong><font face="Helvetica"><font size="4"><font
+            color="#0000ff">　　以冰法土炮防守，苍蝇解空，防守端这里就不着重描述了。</font></font></font></strong> <br> <br> <strong><font
+            face="Helvetica"><font size="4"><font color="#0000ff">　　之后在冰法上桥之前下樵夫王子打一波进攻。这套卡组里王子的优势是不会被火球、滚木、投石巨人位移开继续输出，也能在樵夫临近河道时下王子加速带樵夫入场让对手在相对时间内缩短费用解牌。毒和火球预判黄毛苍蝇海什么的我也不多说了。在樵夫死亡之后如果是带的冰精灵可以立刻下一个，在狂暴buff内飞奔不说，如果对对面有解牌单位可以保护王子苍蝇冰法，如果不下也能冻塔两秒王子更容易输出。</font></font></font></strong>
+        <br> <br> <br>
+        <p></p></div>
+    <div class="info"></div>
+</div>
+</body>
+</html>

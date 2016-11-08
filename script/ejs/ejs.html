@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejs测试</title>
+    <script src="./ejs.js"></script>
+</head>
+<body>
+<script id="J_tml" type="tml">
+<ul>
+    <% names.forEach(function(name) { %>
+        <li><%= name %></li>
+    <% }) %>
+</ul>
+</script>
+
+<script>
+    onload = function() {
+        var users = document.getElementById('J_tml').innerHTML;
+        var names = ['baohe', 'baohe2', 'baohe3'];
+        var html = ejs.render(users, {names:names});
+        document.body.innerHTML = html;
+    }
+</script>
+</body>
+</html>

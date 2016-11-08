@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>css3</title>
+</head>
+<body>
+<h1>border-image</h1>
+<a href="http://www.w3cplus.com/content/css3-border-image" target="_blank">参考资料:http://www.w3cplus.com/content/css3-border-image</a>
+<div class="tips">
+    重点:理解"九宫格"
+</div>
+
+<style>
+    .box{
+        display:inline-block;
+        padding:100px;
+        border:26px solid #00ff00;
+        background:yellow;
+    }
+</style>
+
+<div class="dot">
+    <style>
+        .demo1 .box{
+            border-image:url(./border.png) 27;
+        }
+    </style>
+    <h2>拉伸</h2>
+    <div class="demo demo1">
+        <div class="box"></div>
+    </div>
+</div>
+
+<div class="dot">
+    <style>
+        .demo2 .box{
+            border-image:url(./border.png) 27 round round;
+        }
+    </style>
+    <h2>平铺</h2>
+    <div class="demo demo2">
+        <div class="box"></div>
+    </div>
+</div>
+
+<div class="dot">
+    <style>
+        .demo3 .box{
+            border-image:url(./border.png) 27 6 stretch round;
+        }
+    </style>
+    <h2>只在某个方向平铺(以竖直方向为例)</h2>
+    <div class="demo demo3">
+        <div class="box"></div>
+    </div>
+</div>
+
+<div class="dot">
+    <style>
+        .demo4 .box{
+            border:100px solid transparent;
+            border-image:url(./border2.png) 270 310 round round;
+        }
+    </style>
+    <h2>不规则边框图示例</h2>
+    <div class="demo demo4">
+        <div class="box"></div>
+    </div>
+</div>
+
+<div class="tips">
+    总结:
+    <br>
+    1.理解"九宫格"
+    <br>
+    2.边框的8个位置(4个角+4个边),都是按照空间占满(割了多少就用多少)
+    <br>
+    3.图片在平铺状态下,横竖方向一定是等比出现(4个角也是等比且铺满)
+    <br>
+    4.比例的控制,在于边框尺寸和图片尺寸的比例吻合程度
+    <br>
+    5.实战时,要注意边框的占据空间,是否会影响设计,扁平的影响小
+</div>
+
+
+
+</body>
+</html>
