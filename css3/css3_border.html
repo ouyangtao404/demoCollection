@@ -35,10 +35,10 @@
 <div class="dot">
     <style>
         .demo2 .box{
-            border-image:url(./border.png) 27 round round;
+            border-image:url(./border.png) 27 round;
         }
     </style>
-    <h2>平铺</h2>
+    <h2>平铺-round</h2>
     <div class="demo demo2">
         <div class="box"></div>
     </div>
@@ -46,8 +46,20 @@
 
 <div class="dot">
     <style>
+        .demo5 .box{
+            border-image:url(./border.png) 27 repeat;
+        }
+    </style>
+    <h2>平铺-repeat</h2>
+    <div class="demo demo5">
+        <div class="box"></div>
+    </div>
+</div>
+
+<div class="dot">
+    <style>
         .demo3 .box{
-            border-image:url(./border.png) 27 6 stretch round;
+            border-image:url(./border.png) 27 stretch round;
         }
     </style>
     <h2>只在某个方向平铺(以竖直方向为例)</h2>
@@ -81,6 +93,8 @@
     4.比例的控制,在于边框尺寸和图片尺寸的比例吻合程度
     <br>
     5.实战时,要注意边框的占据空间,是否会影响设计,扁平的影响小
+    <br>
+    6.repeat和round的差异,没搞清楚,推荐用round
 </div>
 
 
