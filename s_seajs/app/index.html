@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>seajs使用示例</title>
+</head>
+<body>
+
+seajs
+
+<script src="/_common/seajs-3.0.0/dist/sea.js"></script>
+<script>
+    // seajs 的简单配置
+    seajs.config({
+        base: "../sea-modules/",
+        alias: {
+            "jquery": "jquery/jquery-1.11.3.js"
+        },
+        charset: 'utf-8',
+        timeout: 20000,
+        debug: 0
+    });
+
+    // 加载入口模块
+    seajs.use("../assets/main", function(main) {
+        main();
+    });
+
+</script>
+</body>
+</html>
